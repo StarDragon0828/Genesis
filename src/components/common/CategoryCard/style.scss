@@ -1,0 +1,85 @@
+.laptops-category {
+  width: 295px;
+  max-width: 295px;
+
+  .signin-container{
+    background-color: white;
+    padding: 13px 25px;
+    border-radius: 8px;  
+    margin-bottom: 22px;
+
+    .category-title {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-bottom: 19px;
+    }
+  }
+
+  img {
+  }
+}
+
+.category-card {
+  width: 295px;
+  max-width: 295px;
+  padding: 20px 25px;
+  background-color: white;
+  border-radius: 8px;
+
+  .category-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+
+  .goods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    row-gap: 25px;
+    margin-bottom: 16px;
+
+    .good {
+      width: 115px;
+
+      img {
+        width: 100%;
+        margin-bottom: 4px;
+        height: 80px;
+      }
+
+      .name {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 0;
+      }
+    }
+
+    .good-1 {
+      width: 100%;
+      img {
+        height: 175px;
+      }
+    }
+  }
+
+  .see-more {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: none;
+    margin-top: auto;
+  }
+}

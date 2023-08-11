@@ -1,0 +1,519 @@
+.myorders-link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-left: 30px;
+    margin-top: 20px;
+
+    .link-none {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.myorders-page {
+    padding: 20px;
+
+    .myorders-main-page {
+        width: 100%;
+        height: 597px;
+        border-radius: 8px;
+        padding: 22px 144px;
+        background: white;
+
+        .myorders-header {
+            margin-bottom: 39px;
+
+            .myorders-title {
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 28px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+    
+            .search {
+                position: relative;
+    
+                .myorders-search {
+                    width: 516px;
+                    height: 40px;
+                    border-radius: 8px;
+                    padding-left: 40px;
+                    margin-right: 10px;
+                    border: 1px solid rgba(0, 0, 0, .1);
+                }
+                
+                .search-icon {
+                    position: absolute;
+                    left: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: #A1A1A1;
+                }
+    
+                .search-btn {
+                    width: 150px;
+                    height: 40px;
+                    border-radius: 4px;
+                    border: 1px;
+                }
+            }
+
+            .myorders {
+                margin-top: 20px;
+                padding-left: 30px;
+                border-bottom: 1px solid #C7C7C7;
+                gap: 30px;
+                position: relative;
+
+                .orders {
+                    font-size: 16px;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    padding-bottom: 12px;
+                    cursor: pointer;
+            
+                    &.active {
+                      font-weight: 700;
+                      border-bottom: 2px solid var(--bs-primary);
+                    }
+                }
+
+                .header-items {
+                    position: absolute;
+                    right: 0;
+                    .orders-item {
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 20px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        margin-right: 10px;
+
+                        span {
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 20px;
+                            letter-spacing: 0em;
+                            text-align: left;
+                        }
+                    }
+
+                    .dropdown {
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        .myorders-component {
+            width: 100%;
+            height: 115px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, .1);
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .myorders-component-panel {
+                width: 100%;
+                display: flex;
+                align-items: center;
+
+                .details {
+                    width: 60%;
+                    img {
+                        width: 103px;
+                        height: 81px;
+                        margin-right: 7px;
+                    }
+    
+                    .description {
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 18px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        margin: 0;
+                    }
+
+                    .link-none {
+                        text-decoration: none;
+                        .order-view {
+                            font-size: 12px;
+                            font-weight: 600;
+                            line-height: 18px;
+                            letter-spacing: 0em;
+                            text-align: left;
+                            margin: 0;
+                        }
+                    }
+    
+                    .order-placed {
+                        font-size: 12px;
+                        font-weight: 600;
+                        line-height: 18px;
+                        margin: 0;
+                        letter-spacing: 0em;
+                        text-align: left;
+    
+                        span {
+                            font-family: Source Sans Pro;
+                            font-size: 12px;
+                            font-weight: 400;
+                            line-height: 18px;
+                            letter-spacing: 0em;
+                            text-align: left;
+                        }
+                    }
+    
+                    .order-closed {
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 18px;
+                        margin: 0;
+                        letter-spacing: 0em;
+                        text-align: left;
+                    }
+                }
+
+                .details-price {
+                    width: 20%;
+                    .orders-price {
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 18px;
+                        margin: 0;
+                        letter-spacing: 0em;
+                        text-align: left;
+                    }
+                }
+                
+
+                .circle-icon {
+                    color: #11BB19;
+                    margin-right: 10px;
+                }
+
+                .order-delivered {
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 18px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+
+                .order-delivered-content {
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+
+                .star-icon {
+                    color: #0158AF;
+                    margin-right: 10px;
+                }
+
+                .order-review {
+                    font-size: 12px;
+                    font-weight: 600;
+                    line-height: 18px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+
+                .cancel-circle {
+                    color: #DD620F;
+                    margin-right: 10px;
+                }
+
+                .canceled {
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 18px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+            }
+        }        
+    }
+}
+
+.vieworder-page {
+    padding: 20px;
+    .vieworder-main-page {
+        width: 100%;
+        height: 228px;
+        border-radius: 8px;
+        background: white;
+        display: flex;
+
+        .delivery-address {
+            padding: 26px 93px;
+            width: 33%;
+            border-right: 1px solid #C7C7C7;
+
+            .delivery-address-title {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+
+            .delivery-address-name {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-top: 27px;
+            }
+
+            .delivery-address-description {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-top: 14px;
+            }
+        }
+
+        .payment-method {
+            padding: 26px 93px;
+            width: 33%;
+            border-right: 1px solid #C7C7C7;
+
+            .payment-method-title {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: center;
+            }
+
+            .payment-card {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 30px;
+
+                .card-icon {
+                    color: black;
+                    width: 26.992002487182617px;
+                    height: 21px;
+                }
+
+                .card-number {
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+        }
+
+        .more {
+            padding: 26px 60px;
+            width: 33%;
+
+            .more-title {
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-bottom: 32px;
+            }
+
+            .more-download {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .invoice-title {
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    margin: 0;
+                }
+
+                .invoice-btn {
+                    width: 142px;
+                    height: 44px;
+                    background: white;
+                    color: black;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 19px;
+                    letter-spacing: 0em;
+                    border: 1px solid rgba(0, 0, 0, .1);
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .vieworder-details-page {
+        margin-top: 20px;
+        width: 100%;
+        height: 188px;
+        border-radius: 8px;
+        padding: 33px 73px;
+        background: white;
+        display: flex;
+
+        .order-details {
+            display: flex;
+            align-items: center;
+            width: 40%;
+            img {
+                width: 103px;
+                height: 81px;
+                margin-right: 30px;
+            }
+
+            .description {
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin: 0;
+            }
+
+            .seller {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 15px;
+                letter-spacing: 0em;
+                margin-bottom: 0;
+                margin-top: 4px;
+                text-align: left;
+            }
+
+            .closed {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 15px;
+                letter-spacing: 0em;
+                margin-bottom: 0;
+                text-align: left;
+            }
+
+            .price {
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 18px;
+                letter-spacing: 0em;
+                margin-bottom: 0;
+                margin-top: 4px;
+                text-align: left;
+            }
+
+            .details-review {
+                display: flex;
+                margin-top: 15px;
+
+                .star-icon {
+                    color: #0158AF;
+                    margin-right: 8px;
+                }
+
+                .review {
+                    font-size: 12px;
+                    font-weight: 600;
+                    line-height: 18px;
+                    letter-spacing: 0em;
+                    margin-bottom: 0;
+                    text-align: left;
+                }
+            }
+
+            
+        }
+
+        .stepper {
+            width: 60%;
+            border-bottom: 1px solid #C7C7C7;
+
+            .StepperContainer-0-2-1 {
+                padding-top: 10px;
+                padding-bottom: 15px;
+            }
+
+            .completed {
+                background-color: #11BB19;
+            }
+
+            .active {
+                background-color: #C7C7C7;
+            }
+
+            .Connector-d1-0-2-17.active {
+                border-color: #C7C7C7;
+            }
+
+            .Connector-d1-0-2-17.completed {
+                border-color: #11BB19;
+            }
+
+            .Connector-d3-0-2-23.active {
+                border-color: #C7C7C7;
+            }
+
+            .Connector-d3-0-2-23.completed {
+                border-color: #11BB19;
+            }
+
+            .Connector-d5-0-2-29.active {
+                border-color: #C7C7C7;
+            }
+
+            .Connector-d5-0-2-29.completed {
+                border-color: #11BB19;
+            }
+
+            .delivered-status {
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: center;
+            }
+        }
+
+    }
+}
+
+.custom-tooltip .tooltip-inner {
+    background-color: #E3E3E3;
+    color: #000000;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+  }
+  
+  .custom-tooltip .tooltip-arrow::before {
+    display: none;
+  }

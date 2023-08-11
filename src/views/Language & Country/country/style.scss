@@ -1,0 +1,254 @@
+.country-setting-page {
+    padding: 20px;
+
+    .country-page {
+        width: 100%;
+        height: 345px;
+        border-radius: 8px;
+        padding: 21px 68px 36px 68px;
+        background: white;
+
+        .country-title {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        .country-details {
+            border-bottom: 1px solid #E3E3E3;
+            .country-details-page {
+                width: 50%;
+                .select-country-title {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    margin-top: 18px;
+                    text-align: left;            
+                }
+        
+                .select-country-note {
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    margin-top: 40px;
+                    margin-bottom: 35px;
+        
+                    span {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                    }
+                }
+
+                .changing-title {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    margin-top: 18px;
+                    text-align: left;
+                }
+
+                .changing-description {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    margin-top: 18px;
+                    text-align: left;
+                }
+            }
+        }
+        
+        .country-btn-group {
+            margin-top: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .cancel-button {
+                width: 120px;
+                height: 44px;
+                padding: 12px 34.55999755859375px 12px 35px;
+                border-radius: 6px;
+                background: white;
+                border: 1px solid rgba(0, 0, 0, .1);
+                color: black;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19px;
+                letter-spacing: 0em;
+                margin-right: 24px;
+                text-align: center;
+            }
+
+            .go-button {
+                width: 180px;
+                height: 44px;
+                padding: 8px 25px 9px 25px;
+                border-radius: 4px;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: center;
+                
+            }
+        }
+    }
+
+    .countrypanel-page {
+        height: 784px;
+        background: white;
+        border-radius: 8px;
+        margin-top: 28px;
+    }
+
+    .product-slider {
+
+        padding: 22px 28px;
+        background-color: white;
+        border-radius: 8px;
+        
+        .slider-title {
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 23px;
+          letter-spacing: 0em;
+          text-align: left;
+        }
+        
+        .slider-pagenumber {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+      
+        .all-details {
+          font-size: 12px;
+          font-weight: 600;
+          line-height: 15px;
+          letter-spacing: 0em;
+          text-align: left;
+          text-decoration: none;
+          margin-left: 11px;
+        }
+      
+        .products {
+          gap: 22px;
+          margin-top: 26px;
+          width: 100%;
+          overflow-y: auto;
+          padding-bottom: 16.5px;
+        }
+      }
+
+    .profile-slider-component {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 14px 11px;
+        width: 196px;
+        max-width: 196px;
+        height: 287px;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, .1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+
+        .rating {
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+            justify-content: space-between;
+        
+            .get-it-button {
+            color: white;
+            width: 71px;
+            height: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: center;
+            padding: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+        }
+
+        .best-seller {
+            max-width: 60px;
+            width: 60px;
+            height: 17px;
+            border-radius: 3px;
+            text-align: center;
+            padding: auto;
+            font-size: 10px;
+            font-weight: 600;
+            line-height: 18px;
+            letter-spacing: 0em;
+        }
+
+        img {
+            width: 148px;
+            height: 116px;
+            margin-top: 3px;
+        }
+
+        .description {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+            margin-top: 5px;
+            margin-bottom: 3px;
+        }
+        
+        .price {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            letter-spacing: 0em;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 0;
+
+            span {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: left;
+                text-decoration: line-through;
+            }
+        }
+        
+        .get-it {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+            margin-bottom: 0;
+            width: 100%;
+        
+            .today {
+                font-weight: 700;
+            }
+        }
+    }
+}

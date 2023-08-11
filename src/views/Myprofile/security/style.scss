@@ -1,0 +1,407 @@
+.security-link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-left: 30px;
+    margin-top: 20px;
+
+    .link-none {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.security-page {
+    padding: 100px 220px;
+
+    .security-title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .security-mainpage {
+        max-width: 100%;
+        min-width: 100%;
+        max-height: 80%;
+        min-height: 80%;
+        border-radius: 8px;
+        background:white;
+
+        .edit-button {
+            max-width: 98px;
+            min-width: 98px;
+            max-height: 35px;
+            min-height: 35px;
+            border-radius: 6px;
+            border: 1px solid rgba(0, 0, 0, .1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+            background: white;
+            color: black;
+        }
+
+        .name {
+            padding: 20px 37px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #E3E3E3;
+
+            .name-title {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 23px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+
+            .name-description {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+
+        .phone {
+            padding: 20px 37px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #E3E3E3;
+            .phone-title {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 23px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+
+            .phone-number {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+
+            .phone-description {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+
+        .email {
+            padding: 20px 37px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #E3E3E3;
+
+            .email-title {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 23px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+
+            .email-description {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+
+        .password {
+            padding: 20px 37px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #E3E3E3;
+            
+            .password-title {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 23px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+
+            .password-description {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+
+        .twostep {
+            padding: 20px 37px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            .twostep-title {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 23px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+
+            .twostep-description {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+    }
+}
+
+.modal-dialog {
+    min-width: 941px;
+    border-radius: 8px;
+    
+    .name-title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;        
+    }
+
+    .name-body {
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: black;
+        }
+
+        h5 {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        input {
+            width: 255px;
+            padding-left: 10px;
+            height: 40px;
+            border-radius: 8px;
+            border: 1px solid rgba(161, 161, 161, 0.5) ;
+        }
+    }
+
+    .name-btn {
+        width: 121px;
+        height: 32px;
+        border-radius: 4px;
+        border: 1px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .modal-footer {
+        justify-content: start;
+    }
+}
+
+.modal-dialog {
+    min-width: 941px;
+    border-radius: 8px;
+    
+    .mobile-title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;        
+    }
+
+    .mobile-body {
+
+        .body-title {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: black;
+        }
+
+        h5 {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        input {
+            width: 255px;
+            height: 40px;
+            padding-left: 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(161, 161, 161, 0.5) ;
+        }
+    }
+
+    .mobile-btn {
+        width: 121px;
+        height: 32px;
+        border-radius: 4px;
+        border: 1px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .modal-footer {
+        justify-content: start;
+    }
+}
+
+.modal-dialog {
+    min-width: 941px;
+    border-radius: 8px;
+    
+    .email-title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;        
+    }
+
+    .email-body {
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: black;
+        }
+
+        h5 {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+        input {
+            width: 255px;
+            height: 40px;
+            border-radius: 8px;
+            padding-left: 10px;
+            border: 1px solid rgba(161, 161, 161, 0.5) ;
+        }
+    }
+
+    .email-btn {
+        width: 121px;
+        height: 32px;
+        border-radius: 4px;
+        border: 1px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .modal-footer {
+        justify-content: start;
+    }
+}
+
+.modal-dialog {
+    min-width: 941px;
+    border-radius: 8px;
+    
+    .password-title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;        
+    }
+
+    .password-body {
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: black;
+        }
+
+        h5 {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: left;
+            margin-top: 28px;
+        }
+
+        input {
+            width: 255px;
+            height: 40px;
+            border-radius: 8px;
+            padding-left: 10px;
+            border: 1px solid rgba(161, 161, 161, 0.5) ;
+        }
+    }
+
+    .password-btn {
+        width: 121px;
+        height: 32px;
+        border-radius: 4px;
+        border: 1px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .modal-footer {
+        justify-content: start;
+    }
+}

@@ -1,0 +1,22 @@
+input:focus, textarea:focus, button:focus {
+  box-shadow: none !important;
+  outline: none;
+}
+
+.h-scrollbar {
+  overflow: auto;
+}
+
+.h-scrollbar::-webkit-scrollbar {
+  height: 5px;
+  background-color: transparent;
+}
+
+.h-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #A1A1A1;
+  border-radius: 2.5px;
+}
+
+.box-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}

@@ -1,0 +1,264 @@
+.manage-addresses-link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 30px;
+
+    .link-none {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.manage-addresses {
+    padding: 100px 220px;
+
+    .manage-main-page {
+        width: 100%;
+        height: 633px;
+        border-radius: 8px;
+        background: white;
+        padding: 29px 24px;
+
+        .manage-addresses-title {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: left;
+            padding-left: 24px;
+        }
+
+        .manage-addresses-add {
+            width: 100%;
+            height: 41px;
+            border-radius: 8px;
+            padding: 9px 31px;
+            background: white;
+            border: 1px solid rgba(0, 0, 0, .1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+
+
+            .link-none {
+                text-decoration: none;
+            }
+
+            .add-title {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 23px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+    }
+
+    .manage-addresses-component {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 31px;
+        width: 100%;
+        height: 124px;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, .1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        margin-top: 40px;
+
+        .manage-addresses-component-title {
+            width: 62px;
+            height: 17px;
+            border-radius: 4px;
+            background:#D9D9D9;
+            font-size: 12px;
+            font-weight: 700;
+            text-align: center;
+            color: #0c0e0f;
+        }
+
+        .manage-addresses-component-details {
+            display: flex;
+            margin-top: 10px;
+
+            .details-name {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-right: 10px;
+            }
+
+            .details-number {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: left;   
+            }
+        }
+    }
+}
+
+.add-addresses-link {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 30px;
+
+    .link-none {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.add-addresses {
+    padding: 100px 220px;
+
+    .add-main-page {
+        width: 100% !important;
+        height: 994px;
+        border-radius: 8px;
+        background: white;
+        padding: 29px 24px;
+        width: 840px;
+
+        .add-addresses-title {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: left;
+            padding-left: 24px;
+        }
+
+        .add-addresses-add {
+            width: 100%;
+            height: 580px;
+            border-radius: 8px;
+            padding: 12px 25px;
+            background: #F4FAFF;
+            border: 1px solid rgba(0, 0, 0, .1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+
+            .add-title {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 23px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+
+            .form-input {
+                width: 40% !important;
+                height: 48px;
+                border-radius: 8px;
+                border: 1px solid rgba(0, 0, 0, .1);
+            }
+
+            .form-input-address {
+                width: 90% !important;
+                height: 100px;
+                border-radius: 8px;
+                border: 1px solid rgba(0, 0, 0, .1);
+            }
+
+            .dropdown {
+                width: 40% !important;
+                height: 48px;
+                border-radius: 8px;
+                border: 1px solid rgba(0, 0, 0, .1);
+
+                .drodown-btn {
+                    width: 100%;
+                    height: 100%;
+                    background: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .dropdown-menu {
+                    width: 100%;
+                }
+            }
+
+            .location-btn {
+                width: 40%;
+                height: 48px;
+                border-radius: 8px;
+                background: #0158AF;
+                color: white;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 23px;
+                letter-spacing: 0em;
+                text-align: center;
+            }
+
+            .save-btn {
+                width: 180px;
+                height: 44px;
+                border-radius: 4px;
+                border: 1px;
+            }
+
+        }
+    }
+
+    .manage-addresses-component {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 31px;
+        width: 100%;
+        height: 124px;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, .1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        margin-top: 40px;
+
+        .manage-addresses-component-title {
+            width: 62px;
+            height: 17px;
+            border-radius: 4px;
+            background:#D9D9D9;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 15px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: #687582;
+        }
+
+        .manage-addresses-component-details {
+            display: flex;
+            margin-top: 10px;
+
+            .details-name {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-right: 10px;
+            }
+
+            .details-number {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: left;   
+            }
+        }
+    }
+}

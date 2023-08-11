@@ -1,0 +1,117 @@
+.checkout-slider-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 11px;
+    width: 196px;
+    max-width: 196px;
+    height: 287px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+
+    .rating {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        justify-content: space-between;
+    
+        .get-it-button {
+          color: white;
+          width: 71px;
+          height: 25px;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 18px;
+          letter-spacing: 0em;
+          text-align: center;
+          padding: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+    .best-seller {
+        max-width: 60px;
+        width: 60px;
+        height: 17px;
+        border-radius: 3px;
+        text-align: center;
+        padding: auto;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 0em;
+    }
+
+    img {
+        width: 148px;
+        height: 116px;
+        margin-top: 3px;
+    }
+
+    .description {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-top: 5px;
+        margin-bottom: 3px;
+    }
+    
+    .price {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0em;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 0;
+
+        span {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+            text-decoration: line-through;
+          }
+    }
+    
+    .get-it {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-bottom: 0;
+        width: 100%;
+    
+        .today {
+            font-weight: 700;
+        }
+    }
+}
+
+.slider-panel {
+    padding: 30px 26px 27px 26px;
+    display: flex;
+    flex-wrap: initial;
+    overflow: auto;
+    gap: 25px;
+
+    .bought-items {
+        gap: 22px;
+        margin-top: 26px;
+        width: 100%;
+        overflow-y: auto;
+        padding-bottom: 16.5px;
+    }
+
+
+}

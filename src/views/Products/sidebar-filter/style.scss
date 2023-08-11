@@ -1,0 +1,52 @@
+.sidebar-filter {
+  max-width: 254px;
+  min-width: 254px;
+  border-radius: 0px 8px 8px 0px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, .14);
+
+  .sidebar-header {
+    padding: 13px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+
+    .text-filters {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+
+  .sidebar-body {
+    padding: 37px 20px;
+    color: black;
+
+    .sidebar-items {
+      .sidebar-title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-top: 7px;
+      }
+      .sidebar-item {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: left;
+        margin-top: 4px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+
+        input {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}

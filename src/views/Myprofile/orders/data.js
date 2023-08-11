@@ -1,0 +1,50 @@
+export const myordersItems = [
+    {
+      image: require("../../../assets/images/myprofile/myorders/item1.png"),
+      description: "Fire-Boltt Ninja Calling 1.69' (4.29cm) Bluetooth Calling smartwatch with Voice",
+      view: "View your item",
+      placed: "30-July-2023",
+      closed: "Return window closed on 21-August-2023",
+      name: "",
+      price: 729.49,
+      delivered: "Delivered on August 31",
+      content: "Your item has been delivered",
+      review: "Rate & Review Product",
+    },
+    {
+      image: require("../../../assets/images/myprofile/myorders/item2.png"),
+      description: "boAt Nirvana Ion with 120 HRS Playback(24hrs/Charge), Crystal Bionic So...",
+      view: "View your item",
+      placed: "25-July-2023",
+      closed: "Return window closed on 10-August-2023",
+      name: "",
+      price: 329.49,
+      delivered: "Delivered on July 27",
+      content: "Your item has been delivered",
+      review: "Rate & Review Product",
+    },
+    {
+      image: require("../../../assets/images/myprofile/myorders/item3.png"),
+      description: "Echo (4th Gen, 2020 release) | Premium sound powered by Dolby and...",
+      view: "View your item",
+      name: "",
+      price: 812.49,
+      delivered: "",
+      canceled: "Cancelled on July 12",
+    },
+]
+
+export const myordersDetailsItems = [
+  {
+    image: require("../../../assets/images/myprofile/myorders/item1.png"),
+    description: "Fire-Boltt Ninja Calling 1.69' (4.29cm) Bluetooth Calling smartwatch with Voice",
+    view: "View your item",
+    placed: "30-July-2023",
+    closed: "Return window closed on 21-August-2023",
+    name: "",
+    price: 729.49,
+    delivered: "Delivered on August 31",
+    content: "Your item has been delivered",
+    review: "Rate & Review Product",
+  },
+]

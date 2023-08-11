@@ -1,0 +1,28 @@
+.button {
+  padding: 8px auto;
+  border-radius: 4px;
+  border: 1px;
+  background-color: var(--bs-warning);
+  color: black;
+  height: 44px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+
+.custom-tooltip .tooltip-inner {
+  background-color: #E3E3E3;
+  color: #000000;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.custom-tooltip .tooltip-arrow::before {
+  display: none;
+}

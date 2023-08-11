@@ -1,0 +1,26 @@
+$theme-colors: (
+  'info': tomato,
+  'danger': teal,
+  'primary': #0158AF,
+  'warning': #FFC011,
+  'secondary': #A1A1A1,
+  'third': #E3E3E3,
+);
+
+/* import bootstrap to set changes */
+@import '~bootstrap/scss/bootstrap';
+@import './custom.scss';
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+.outlet {
+  flex: 1;
+  background-color: #F0F0F0;
+}
