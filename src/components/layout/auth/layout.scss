@@ -51,4 +51,12 @@
       }
     }
   }
+
+  @media screen and (max-width: 1300px) {
+    .inputs {
+      width: 200px !important;
+    }
+
+    padding: 20px 20px;
+  }
 }

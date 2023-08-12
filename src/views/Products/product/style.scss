@@ -426,13 +426,13 @@
             }
 
             .member-title {
-              font-size: 16px;
+              font-size: 13px;
               font-weight: 900;
-              line-height: 24px;
               letter-spacing: 0em;
               text-align: right;
               color: black;
               margin-bottom: 0;
+              min-width: 115px;
 
               span {
                 color: #FFC011;

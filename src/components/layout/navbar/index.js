@@ -4,8 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./style.scss";
 import { faCaretRight, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import myImage from '../../../assets/images/product/1.png'
+// import myImage from '../../../assets/images/home/navbar-club.png';
+import myImage from '../../../assets/images/product/2.png'
+import memberImage from '../../../assets/images/home/navbar-member.png'
 import { Link } from "react-router-dom";
+
 
 
 const Navbar = (props) => {
@@ -328,6 +331,7 @@ const Navbar = (props) => {
             </View>
             <View>
               <Link to="/memberlogin">
+                <Image src={memberImage} />
                 <h5 className="member-login text-primary">Member Login</h5>
               </Link>
             </View>
