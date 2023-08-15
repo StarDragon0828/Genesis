@@ -46,5 +46,22 @@ export const productData = {
       description: "Upto $900.00 discount on HDFC Bank Credit Cards,…",
       count: 2
     },
-  ]
+  ],
+  giftCard: [
+    {
+      image: require('../../../assets/images/product/gift-card/card1.png'),
+    },
+    {
+      image: require('../../../assets/images/product/gift-card/card2.png'),
+    },
+    {
+      image: require('../../../assets/images/product/gift-card/card3.png'),
+    },
+    {
+      image: require('../../../assets/images/product/gift-card/card4.png'),
+    },
+    {
+      image: require('../../../assets/images/product/gift-card/card5.png'),
+    },
+  ],
 }

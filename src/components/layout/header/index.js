@@ -33,6 +33,39 @@ const Header = (props) => {
   };
 
   const categories = [
+    "Pneumatics",
+    "Robotics",
+    "Mechanics",
+    "Car mechanics",
+    "Machine mechanics",
+    "Building materials",
+    "Hydrodynamics",
+    "Electricity",
+    "Water",
+    "Agriculture",
+    "Spraying",
+    "Laboratory",
+    "Chemistry",
+    "Aerodynamics",
+    "4 wheels",
+    "2 wheels",
+    "Electronics",
+    "Construction",
+    "Refrigeration",
+    "Warming up",
+    "Space",
+    "Archaeology",
+    "Ecology",
+    "Physics",
+    "Magnet",
+    "Medicine",
+    "Optics",
+    "Biotechnology",
+    "Films - construction",
+    "Music - construction",
+    "Printing",
+    "Replication",
+    "Iron",
     "Furniture",
     "Lighting products",
     "Home appliances",
@@ -153,7 +186,7 @@ const Header = (props) => {
         </Link>
       </View>
       <View className="gift-card" >
-        <Link to="" >
+        <Link to="/giftcard" >
           <FontAwesomeIcon icon={faWallet} className="icon" />
           <h5 className="title" >Gift Cards</h5>
         </Link>

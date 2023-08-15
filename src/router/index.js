@@ -24,6 +24,8 @@ import AddAddress from "../views/Myprofile/addresses/add-address";
 import MyOrders from "../views/Myprofile/orders";
 import ViewMyOrder from "../views/Myprofile/orders/viewmyorder";
 import MemberLogin from "../views/Auth/member/member-login";
+import GiftCard from "../views/Gift/Gift-card";
+import MyGiftCard from "../views/Gift/Gift-card/manage";
 
 export const routes = createBrowserRouter([
   {
@@ -113,5 +115,13 @@ export const routes = createBrowserRouter([
   {
     path: "/languagesetting",
     element: <PublicLayout view={<LanguageSetting />}/>
+  },
+  {
+    path: "/giftcard",
+    element: <PublicLayout view={<GiftCard/>}/>
+  },
+  {
+    path: "/giftcard/mygiftcard",
+    element: <PublicLayout view={<MyGiftCard/>}/>
   },
 ])

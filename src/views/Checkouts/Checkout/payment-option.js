@@ -91,9 +91,6 @@ export default function PaymentOption(props) {
                                             <View className="card-payment" >
                                                 <FormCheck type="radio" id="radio4" label="Credit / Debit / ATM Card" name="myRadioGroup" />
                                             </View>
-                                            {/* <Image src={mastercardImage} />
-                                            <Image src={visaImage} />
-                                            <Image src={creditcardImage} /> */}
                                             {paymentOptionImage.map((item) => (
                                                 <Image src={item.image} />
                                             ))}

@@ -1,0 +1,302 @@
+.giftcard-mainpage {
+    padding: 40px 20px 40px 20px;
+
+    .gift-card-page {
+        width: 100%;
+        height: 200px;
+        border-radius: 8px;
+        background: white;
+        padding: 20px;
+
+        .title {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: left; 
+            margin-bottom: 0;
+        }
+
+        .gift-card-details {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+
+            .gift-component {
+                width: 30%;
+                height: 102px;
+                border-radius: 8px;
+                cursor: pointer;
+                border: 1px;
+                padding: 15px;
+                background: white;
+                border: 1px solid rgba(0, 0, 0, .1);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    color: black;
+
+                    img {
+                        height: 60px;
+                        margin-right: 20px;
+                    }
+    
+                    .gift-title {
+                        font-size: 22px;
+                        font-weight: 700;
+                        line-height: 28px;
+                        letter-spacing: 0em;
+                        text-align: left; 
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .giftcard-component {
+                width: 30%;
+                height: 102px;
+                border-radius: 8px;
+                cursor: pointer;
+                border: 1px;
+                padding: 15px;
+                background: white;
+                border: 1px solid rgba(0, 0, 0, .1);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    color: black;
+
+                    img {
+                        height: 60px;
+                        margin-right: 20px;
+                    }
+    
+                    .card-title {
+                        font-size: 22px;
+                        font-weight: 700;
+                        line-height: 28px;
+                        letter-spacing: 0em;
+                        text-align: left; 
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .account-component {
+                width: 30%;
+                height: 102px;
+                border-radius: 8px;
+                cursor: pointer;
+                border: 1px;
+                padding: 15px;
+                background: white;
+                border: 1px solid rgba(0, 0, 0, .1);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    color: black;
+
+                    img {
+                        height: 60px;
+                        margin-right: 20px;
+                    }
+    
+                    .card-title {
+                        font-size: 22px;
+                        font-weight: 700;
+                        line-height: 28px;
+                        letter-spacing: 0em;
+                        text-align: left; 
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .gift-card-main {
+        width: 100%;
+        height: 760px;
+        border-radius: 8px;
+        cursor: pointer;
+        border: 1px;
+        padding: 15px;
+        background: white;
+        border: 1px solid rgba(0, 0, 0, .1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+        margin-top: 30px;
+        overflow: auto;
+
+        .card-category {
+            display: flex;
+            gap: 10px;
+
+            .category {
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: left;
+                padding-bottom: 12px;
+                cursor: pointer;
+        
+                &.active {
+                  font-weight: 700;
+                  border-bottom: 2px solid var(--bs-primary);
+                }
+            }
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: left; 
+            margin-bottom: 10px;  
+            margin-top: 10px;
+        }
+
+        .details {
+            display: flex;
+            gap: 10px;
+
+            .service {
+                width: 50%;
+                margin-top: 20px;
+
+                .accordion {
+                    border-radius: 8px;
+                    background-color: red;
+        
+                    .policy {
+                    border: none;
+                    border-bottom: 1px solid #F0F0F0;
+        
+                    .accordion-button:not(.collapsed) {
+                        background-color: white;
+                    } 
+        
+                    .header-title {
+                        font-size: 18px;
+                        font-weight: 600;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: black;
+                    }
+                    
+                    .body-description {
+                        font-size: 18px;
+                        font-weight: 400;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: black;
+                    }
+                    }
+        
+                    .policy-end {
+                    border: none;
+        
+                    .accordion-button:not(.collapsed) {
+                        background-color: white;
+                    } 
+        
+                    .header-title {
+                        font-size: 18px;
+                        font-weight: 600;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: black;
+                    }
+                    
+                    .body-description {
+                        font-size: 18px;
+                        font-weight: 400;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: black;
+                    }
+                    }
+                }
+            }
+
+            .card-details {
+                width: 50%;
+
+                .card-component {
+                    width: 100%;
+                    height: 120px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    border: 1px;
+                    padding: 15px;
+                    background: white;
+                    border: 1px solid rgba(0, 0, 0, .1);
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+                    margin-bottom: 5px;
+
+                    img {
+                        height: 60px;
+                        margin-right: 30px;
+                        cursor: pointer;
+                    }
+
+                    .card-name {
+                        font-size: 18px;
+                        font-weight: 700;
+                        line-height: 28px;
+                        letter-spacing: 0em;
+                        text-align: left; 
+                        margin-bottom: 0px; 
+                        margin-right: 15px;
+                    }
+
+                    .card-value {
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 28px;
+                        letter-spacing: 0em;
+                        text-align: left; 
+                        margin-bottom: 0px;
+                    }
+
+                    .description {
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 28px;
+                        letter-spacing: 0em;
+                        text-align: left; 
+                        margin-bottom: 0px;
+                    }
+
+                    .buy-btn {
+                        color: black;
+                        width: 71px;
+                        height: 25px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        line-height: 18px;
+                        letter-spacing: 0em;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                
+            }
+        }
+    }
+}

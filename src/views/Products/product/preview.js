@@ -44,12 +44,12 @@ export default function ProductPreview(props) {
             enlargedImageContainerDimensions={{
               // width: 950,
               // height: 700,
-              width:"100%",
+              width:"140%",
               height:"100%"
             }}
-            enlargedImagePosition='over'
+            // enlargedImagePosition='over'
             enlargedImageContainerStyle={{
-              border: "none",
+              // border: "none",
               zIndex: 1000
             }}
           />

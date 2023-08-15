@@ -7,7 +7,8 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react";
 import myImage from '../../../assets/images/product/4.png'
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faGift, faRightLong, faStar, faUserLarge } from '@fortawesome/free-solid-svg-icons';
+import GiftModal from "./gift-modal";
 
 export default function ProductDetail(props) {
 
@@ -76,9 +77,19 @@ export default function ProductDetail(props) {
     </Tooltip>
   );
 
+  const [giftModal, setGiftModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setGiftModal(true);
+  }
+
+  const handleCloseModal = () => {
+    setGiftModal(false);
+  }
+
 
   return ( 
-  <Stack className="d-flex w-100" >
+  <Stack className="details" >
     <View className="product-detail">
       <View className="product-details">
         <h5 className="product-name">APPLE iPhone 13 (Blue, 128 GB)</h5>
@@ -139,6 +150,15 @@ export default function ProductDetail(props) {
             <Button text="Buy Now" tooltipText="You can buy it now." className="buy-btn" />
           </Link>
         </View>
+        <View className="gift-container" >
+          <h5 className="title" >Send a Gift</h5>
+          <View className="icon" onClick={handleOpenModal} >
+            <FontAwesomeIcon icon={faGift} className="icon" />
+            <FontAwesomeIcon icon={faRightLong} className="icon" />
+            <FontAwesomeIcon icon={faUserLarge} className="icon" />
+          </View>
+        </View>
+        
         <View className="offers-container">
           <h6 className="offers-header">Offers</h6>
           <View className="offers">
@@ -257,6 +277,7 @@ export default function ProductDetail(props) {
         </View>
       </View>
     </View>
+    <GiftModal giftModal={giftModal} onHide={handleCloseModal} onClick={handleCloseModal}/>
   </Stack>
   );
 }

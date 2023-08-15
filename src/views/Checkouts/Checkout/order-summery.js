@@ -1,7 +1,7 @@
 import View from '../../../components/UI/View';
 import './style.scss'
 import { orderSummeryItem } from './data';
-import { FormCheck, Image } from 'react-bootstrap';
+import { FormCheck, Image, Modal } from 'react-bootstrap';
 import Button from '../../../components/UI/Button';
 import { useState } from 'react';
 
@@ -26,6 +26,18 @@ export default function OrderSummery(props) {
     }
 
     let content;
+
+    const [showGiftModal, setShowGiftModal] = useState(false);
+
+    const handleOpenModal = () => {
+        setShowGiftModal(true);
+    }
+
+    const handleCloseModal = () => {
+        setShowGiftModal(false);
+    }
+
+
 
     switch(props.currentPage){
             case 'page3':
@@ -61,9 +73,34 @@ export default function OrderSummery(props) {
                             <View>
                                 <Button text="REMOVE" className='remove' onClick={removeCounter} />
                             </View>
-                            <FormCheck type="radio" id="radio1" label="Gift" name="myRadioGroup" checked />
-                            <FormCheck type="radio" id="radio1" label="General" name="myRadioGroup" />
+                            <Button text="Gift" className="gift-btn" onClick={handleOpenModal} />
                         </View>
+                        <Modal show={showGiftModal} onHide={handleCloseModal} centered>
+                            <Modal.Header closeButton>
+                                <Modal.Title className='gift-title' >There he receives a gift</Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body className='gift-body'>
+                                <View className="d-flex align-items-center justify-content-around">
+                                    <View>
+                                        <h5>Name</h5>
+                                        <input placeholder='Enter Name' />
+                                        <h5 className='title'>Email</h5>
+                                        <input placeholder='Enter Email' />
+                                        <h5>Phone Number</h5>
+                                        <input placeholder='Enter Phone number' />
+                                    </View>
+                                    <View>
+                                        <h5>Country</h5>
+                                        <input placeholder='Enter Country' />
+                                        <h5>City</h5>
+                                        <input placeholder='Enter City' />
+                                    </View>
+                                </View>
+                            </Modal.Body>
+                            <Modal.Footer>
+                                <Button text="OK" className="gift-btn" onClick={handleCloseModal} />
+                            </Modal.Footer>
+                        </Modal>
                     </View>
             break;
             default:

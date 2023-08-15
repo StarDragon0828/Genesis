@@ -49,14 +49,14 @@ export default function SecurityModal(props) {
                         <p>By enrolling a mobile phone number, you consent to receive automated security notifications via text message from Genesis. Remove your number in Login & Security to cancel. For more information reply HELP. Message and data rates may apply. Message frequency varies.</p>
                     </Modal.Body>
                     <Modal.Footer>
-                    <Button text="Continue" variant="primary" className="mobile-btn" onClick={onClick} />
+                        <Button text="Continue" variant="primary" className="mobile-btn" onClick={onClick} />
                     </Modal.Footer>
                 </Modal>
             </View>
             <View>
                 <Modal show={showEmailModal} onHide={onHide} centered >
                         <Modal.Header closeButton>
-                        <Modal.Title className='email-title' >Add an email address</Modal.Title>
+                            <Modal.Title className='email-title' >Add an email address</Modal.Title>
                         </Modal.Header>
                         <Modal.Body className='email-body'>
                             <p>Enter the new email address you would like to associate with your account below. We will send a One Time Password (OTP) to that address.</p>
@@ -64,27 +64,27 @@ export default function SecurityModal(props) {
                             <input placeholder='Enter New Email' />
                         </Modal.Body>
                         <Modal.Footer>
-                        <Button text="Continue" variant="primary" className="email-btn" onClick={onClick} />
+                            <Button text="Continue" variant="primary" className="email-btn" onClick={onClick} />
                         </Modal.Footer>
                 </Modal>
             </View>
             <View>
                 <Modal show={showPasswordModal} onHide={onHide} centered >
-                        <Modal.Header closeButton>
+                    <Modal.Header closeButton>
                         <Modal.Title className='password-title' >Change Password</Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body className='password-body'>
-                            <p>Use the form below to change the password for your Genesis account</p>
-                            <h5>Current password:</h5>
-                            <input placeholder='Enter Current Password' />
-                            <h5>New password:</h5>
-                            <input placeholder='Enter New Password' />
-                            <h5>Re-enter New Password:</h5>
-                            <input placeholder='Re-enter New Password' />
-                        </Modal.Body>
-                        <Modal.Footer>
-                        <Button text="Continue" variant="primary" className="password-btn" onClick={onClick} />
-                        </Modal.Footer>
+                    </Modal.Header>
+                    <Modal.Body className='password-body'>
+                        <p>Use the form below to change the password for your Genesis account</p>
+                        <h5>Current password:</h5>
+                        <input placeholder='Enter Current Password' />
+                        <h5>New password:</h5>
+                        <input placeholder='Enter New Password' />
+                        <h5>Re-enter New Password:</h5>
+                        <input placeholder='Re-enter New Password' />
+                    </Modal.Body>
+                    <Modal.Footer>
+                    <Button text="Continue" variant="primary" className="password-btn" onClick={onClick} />
+                    </Modal.Footer>
                 </Modal>
             </View>
         </View>
