@@ -1,108 +1,54 @@
-import { Accordion, Dropdown, Form, FormCheck, FormGroup, Image, Modal } from 'react-bootstrap';
-import View from '../../../components/UI/View';
-import Button from '../../../components/UI/Button'
+import { Accordion, Form, FormCheck, FormGroup, FormLabel, Image, Modal } from 'react-bootstrap';
+import View from '../../../../components/UI/View';
+import Button from '../../../../components/UI/Button'
+import paypalImage from '../../../../assets/images/chekout/paymentMethod/paypal.png'
+import walletImage from '../../../../assets/images/chekout/paymentMethod/wallet.png';
+import bankImage from '../../../../assets/images/chekout/paymentMethod/bank.png';
 import './style.scss';
-import { Link } from 'react-router-dom';
-import {giftcard} from './data';
-import GiftImage from '../../../assets/images/gift-card/gift.png';
-import GiftCardImage from '../../../assets/images/gift-card/giftcard.png';
-import AccountImage from '../../../assets/images/gift-card/account.png';
+import {paymentOptionImage} from '../data'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUpload } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
-import paypalImage from '../../../assets/images/chekout/paymentMethod/paypal.png';
-import walletImage from '../../../assets/images/chekout/paymentMethod/wallet.png';
-import bankImage from '../../../assets/images/chekout/paymentMethod/bank.png';
-import {paymentOptionImage} from './data'
 
 
-export default function CardProfile(props) {
 
-    const [showBuyModal, setShowBuyModal] = useState(false);
+export default function GiftCardModal(props) {
 
-    const handleCloseModal = () => {
-        setShowBuyModal(false);
+    const [selectedFile, setSelectedFile] = useState(null);
+    const [uploadedImage, setUploadedImage] = useState('');
+
+    const handleButtonClick = () => {
+        fileInputRef.current.click();
+    };
+
+    const handleFileChange = (event) => {
+        const file = event.target.files[0];
+        setSelectedFile(file);
+        const imageUrl = URL.createObjectURL(file);
+        setUploadedImage(imageUrl);
+    };
+
+    const { showBuyModal,tip, showMailModal, showSendModal, selectedGiftCardImage, fileInputRef, onHide,type, onClick } = props;
+
+    const hideModal = () => {
+        clearImage()
+        onHide()
     }
 
-    const handleOpenModal = () => {
-        setShowBuyModal(true);
+    const sendGift = () => {
+        clearImage()
+        onClick()
     }
 
-    return (
+    const clearImage = () => {
+        if (fileInputRef && fileInputRef.current)
+            fileInputRef.current.value = null
+        setUploadedImage("")
+    }
+
+    return(
         <View>
-            <View className="gift-card-page">
-                <View >
-                    <h5 className='title' >Gift Card</h5>
-                </View>
-                <View className="gift-card-details" >
-                    <View className="gift-component" >
-                        <Link to='/products' >
-                            <Image src={GiftImage} />
-                            <View>
-                                <h5 className='gift-title' >Send Gift</h5>
-                            </View>
-                        </Link>
-                    </View>
-                    <View className="giftcard-component" >
-                        <Link to='/giftcard/mygiftcard'>
-                            <Image src={GiftCardImage} />
-                            <View>
-                                <h5 className='card-title' >Manage GiftCard</h5>
-                            </View>
-                        </Link>
-                    </View>
-                    <View className="account-component" >
-                        <Link to='/myprofile'>
-                            <Image src={AccountImage} />
-                            <View>
-                                <h5 className='card-title' >Account</h5>
-                            </View>
-                        </Link>
-                    </View>
-                </View>
-            </View>
-            <View className="gift-card-main" >
-                <View className="card-category" >
-                    <Link to="/giftcard/birthdaycard" >
-                        <Button text="Birthday" className="birthday-btn" />
-                    </Link>
-                    <Link to="/giftcard/specialdaycard" >
-                        <Button text="Special Day" className="special-btn" />
-                    </Link>
-                    <Link to="/giftcard/specialsomeone">
-                        <Button text="To Someone Special" className="someone-btn" />
-                    </Link>
-                    <Link to="/giftcard/wedding" >
-                        <Button text="Wedding" className="wedding-btn" />
-                    </Link>
-                    <Link to="/giftcard/newbaby" >
-                        <Button text="New baby" className="baby-btn" />
-                    </Link>
-                </View>
-                <h5 className='title' >Gift Card</h5> 
-                <View className="details" >
-                    <View className="card-details" >
-                        {giftcard.giftCard.map((item) => (
-                            <View className="card-component">
-                                <View className="d-flex align-items-center" >
-                                    <Image src={item.image}/>
-                                    <View className="d-flex" >
-                                        <View className="d-flex align-items-center">
-                                            <h5 className='card-name' >{item.title}</h5>
-                                            <h5 className='card-value text-primary'>{item.value}</h5>
-                                        </View>
-                                    </View>
-                                </View>
-                                <View className="d-flex align-items-center justify-content-between" >
-                                    <h5 className='description' >{item.description}</h5>
-                                    <View>
-                                        <Button text="Buy" className='buy-btn' onClick={handleOpenModal}  />
-                                    </View>
-                                </View>
-                            </View>
-                        ))}
-                    </View>
-                </View>
-            </View>
-            <Modal show={showBuyModal} onHide={handleCloseModal} centered >
+            <Modal show={showBuyModal} onHide={hideModal} centered >
                 <Modal.Header closeButton>
                     <Modal.Title className='pay-title' >Gift Card Purchase Payment</Modal.Title>
                 </Modal.Header>
@@ -120,7 +66,7 @@ export default function CardProfile(props) {
                                         <Form.Control type="text" placeholder="UPI ID"/>
                                     </FormGroup>
                                     <View>
-                                        <Button text="Pay $999.00" className="payment-btn" onClick={handleCloseModal}/>
+                                        <Button text="Pay $999.00" className="payment-btn" onClick={onClick}/>
                                     </View>
                                 </Form>
                             </Accordion.Body>
@@ -138,7 +84,7 @@ export default function CardProfile(props) {
                                         <Form.Control type="text" placeholder="Wallet Address"/>
                                     </FormGroup>
                                     <View>
-                                        <Button text="Pay $999.00" className="payment-btn" onClick={handleCloseModal} />
+                                        <Button text="Pay $999.00" className="payment-btn" onClick={onClick} />
                                     </View>
                                 </Form>
                             </Accordion.Body>
@@ -156,7 +102,7 @@ export default function CardProfile(props) {
                                         <Form.Control type="text" placeholder="PayPal Address"/>
                                     </FormGroup>
                                     <View>
-                                        <Button text="Pay $999.00" className="payment-btn" onClick={handleCloseModal} />
+                                        <Button text="Pay $999.00" className="payment-btn" onClick={onClick} />
                                     </View>
                                 </Form>
                             </Accordion.Body>
@@ -182,7 +128,7 @@ export default function CardProfile(props) {
                                         </View>
                                     </FormGroup>
                                     <View className="submit">
-                                        <Button text="Pay $999.00" className="pay-btn" onClick={handleCloseModal} />
+                                        <Button text="Pay $999.00" className="pay-btn" onClick={onClick} />
                                     </View>
                                 </Form>
                             </Accordion.Body>
@@ -200,7 +146,7 @@ export default function CardProfile(props) {
                                         <Form.Control type="text" placeholder="Address"/>
                                     </FormGroup>
                                     <View>
-                                        <Button text="Pay $999.00" className="payment-btn" onClick={handleCloseModal}/>
+                                        <Button text="Pay $999.00" className="payment-btn" onClick={onClick}/>
                                     </View>
                                 </Form>
                             </Accordion.Body>
@@ -208,7 +154,70 @@ export default function CardProfile(props) {
                     </Accordion>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button text="Pay" className="pay-btn" onClick={handleCloseModal} ></Button>
+                    <Button text="Pay" className="pay-btn" onClick={onClick} ></Button>
+                </Modal.Footer>
+            </Modal>
+            <Modal show={showSendModal} onHide={hideModal} centered>
+                <Modal.Header closeButton>
+                    <Modal.Title className='gift-title' >There he receives a gift</Modal.Title>
+                </Modal.Header>
+                <Modal.Body className='gift-body'>
+                    <View className="d-flex align-items-center justify-content-around" >
+                        <View className="image-container">
+                            <Image src={selectedGiftCardImage} />
+                            <h5 className='card-tip' >{tip}</h5>
+                            <Image src={uploadedImage} className={`upload-image ${uploadedImage ? 'uploaded' : ''}`} />
+                            <input type="file" accept="image/*" ref={fileInputRef} style={{ display: 'none' }} onChange={handleFileChange} />
+                            <View className="upload-icon" onClick={handleButtonClick}>
+                                <FontAwesomeIcon icon={faUpload} className='icon' style={{color: "#c0c7d3",}} />
+                            </View>
+                        </View>
+                        <View className="d-flex align-items-center justify-content-around w-100">
+                            <View>
+                                <h5 className='title'>Name</h5>
+                                <input placeholder='Enter Name' />
+                                <h5 className='title'>Email</h5>
+                                <input placeholder='Enter Email' />
+                                <h5>Phone Number</h5>
+                                <input placeholder='Enter Phone number' />
+                            </View>
+                            <View>
+                                <h5>City</h5>
+                                <input placeholder='Enter City' />
+                                <h5>Country</h5>
+                                <input placeholder='Enter Country' />
+                            </View>
+                        </View>
+                    </View>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button text="OK" className="gift-btn" onClick={sendGift} />
+                </Modal.Footer>
+            </Modal>
+            <Modal show={showMailModal} onHide={hideModal} centered>
+                <Modal.Header closeButton>
+                    <Modal.Title className='gift-title' >There he receives a Mail</Modal.Title>
+                </Modal.Header>
+                <Modal.Body className='gift-body'>
+                    <View className="d-flex align-items-center justify-content-around" >
+                        <View className="d-flex align-items-center justify-content-around w-100">
+                            <View>
+                                <h5 className='title'>Name</h5>
+                                <input placeholder='Enter Name' />
+                                <h5 className='title'>Email</h5>
+                                <input placeholder='Enter Email' />
+                            </View>
+                            <View>
+                                <FormGroup>
+                                    <FormLabel>Message</FormLabel>
+                                    <Form.Control as="textarea" rows="3" name="address" />
+                                </FormGroup>
+                            </View>
+                        </View>
+                    </View>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button text="OK" className="gift-btn" onClick={onClick} />
                 </Modal.Footer>
             </Modal>
         </View>

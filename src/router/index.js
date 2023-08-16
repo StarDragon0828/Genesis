@@ -26,6 +26,11 @@ import ViewMyOrder from "../views/Myprofile/orders/viewmyorder";
 import MemberLogin from "../views/Auth/member/member-login";
 import GiftCard from "../views/Gift/Gift-card";
 import MyGiftCard from "../views/Gift/Gift-card/manage";
+import Birthday from "../views/Gift/Gift-card/card-type/birthday";
+import SpecialDay from "../views/Gift/Gift-card/card-type/special-day";
+import SpecialSomeone from "../views/Gift/Gift-card/card-type/someone";
+import Wedding from "../views/Gift/Gift-card/card-type/wedding";
+import BabyGift from "../views/Gift/Gift-card/card-type/baby";
 
 export const routes = createBrowserRouter([
   {
@@ -123,5 +128,25 @@ export const routes = createBrowserRouter([
   {
     path: "/giftcard/mygiftcard",
     element: <PublicLayout view={<MyGiftCard/>}/>
+  },
+  {
+    path: "/giftcard/birthdaycard",
+    element: <PublicLayout view={<Birthday/>}/>
+  },
+  {
+    path: "/giftcard/specialdaycard",
+    element: <PublicLayout view={<SpecialDay/>}/>
+  },
+  {
+    path: "/giftcard/specialsomeone",
+    element: <PublicLayout view={<SpecialSomeone/>}/>
+  },
+  {
+    path: "/giftcard/wedding",
+    element: <PublicLayout view={<Wedding/>}/>
+  },
+  {
+    path: "/giftcard/newbaby",
+    element: <PublicLayout view={<BabyGift/>}/>
   },
 ])

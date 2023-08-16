@@ -129,7 +129,7 @@
 
     .gift-card-main {
         width: 100%;
-        height: 760px;
+        height: 820px;
         border-radius: 8px;
         cursor: pointer;
         border: 1px;
@@ -142,19 +142,89 @@
 
         .card-category {
             display: flex;
-            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, .1);
+                
+            a {
+                text-decoration: none;
 
-            .category {
-                font-size: 16px;
-                line-height: 20px;
-                letter-spacing: 0em;
-                text-align: left;
-                padding-bottom: 12px;
-                cursor: pointer;
-        
-                &.active {
-                  font-weight: 700;
-                  border-bottom: 2px solid var(--bs-primary);
+                .birthday-btn {
+                    width: 170px;
+                    height: 44px;
+                    border-radius: 4px;
+                    border: 1px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                }
+            }
+
+            a {
+                text-decoration: none;
+
+                .special-btn {
+                    width: 170px;
+                    height: 44px;
+                    border-radius: 4px;
+                    border: 1px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                }
+            }
+
+            a {
+                text-decoration: none;
+
+                .someone-btn {
+                    width: 170px;
+                    height: 44px;
+                    border-radius: 4px;
+                    border: 1px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                }
+            }
+
+            a {
+                text-decoration: none;
+
+                .wedding-btn {
+                    width: 170px;
+                    height: 44px;
+                    border-radius: 4px;
+                    border: 1px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                }
+            }
+            
+            a {
+                text-decoration: none;
+
+                .baby-btn {
+                    width: 170px;
+                    height: 44px;
+                    border-radius: 4px;
+                    border: 1px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    text-align: center;
                 }
             }
         }
@@ -173,67 +243,8 @@
             display: flex;
             gap: 10px;
 
-            .service {
-                width: 50%;
-                margin-top: 20px;
-
-                .accordion {
-                    border-radius: 8px;
-                    background-color: red;
-        
-                    .policy {
-                    border: none;
-                    border-bottom: 1px solid #F0F0F0;
-        
-                    .accordion-button:not(.collapsed) {
-                        background-color: white;
-                    } 
-        
-                    .header-title {
-                        font-size: 18px;
-                        font-weight: 600;
-                        letter-spacing: 0em;
-                        text-align: left;
-                        color: black;
-                    }
-                    
-                    .body-description {
-                        font-size: 18px;
-                        font-weight: 400;
-                        letter-spacing: 0em;
-                        text-align: left;
-                        color: black;
-                    }
-                    }
-        
-                    .policy-end {
-                    border: none;
-        
-                    .accordion-button:not(.collapsed) {
-                        background-color: white;
-                    } 
-        
-                    .header-title {
-                        font-size: 18px;
-                        font-weight: 600;
-                        letter-spacing: 0em;
-                        text-align: left;
-                        color: black;
-                    }
-                    
-                    .body-description {
-                        font-size: 18px;
-                        font-weight: 400;
-                        letter-spacing: 0em;
-                        text-align: left;
-                        color: black;
-                    }
-                    }
-                }
-            }
-
             .card-details {
-                width: 50%;
+                width: 100%;
 
                 .card-component {
                     width: 100%;
@@ -293,10 +304,232 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                    }
+                    } 
                 }
                 
             }
         }
+    }
+}
+
+.modal-dialog {
+    min-width: 941px;
+    border-radius: 8px;
+    
+    .pay-title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;        
+    }
+
+    .pay-body {
+        .payment-btn {
+            width: 180px;
+            height: 40px;
+            border-radius: 4px;
+            border: 1px;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: center;
+        } 
+
+        .payment-upi {
+          .upi {
+            .form-check-label {
+                margin-left: 30px;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+        
+            .upi-id {
+                margin-right: 40px;
+            } 
+        }
+        
+        .payment-wallets {
+            .wallets {
+                .form-check-label {
+                    margin-left: 30px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    margin-right: 50px;
+                }
+            }
+
+            img {
+                height: 28px;
+            }
+
+            .wallet-id {
+                margin-right: 40px;
+            }
+        }
+
+        .payment-paypal {
+           .paypal {
+                .form-check-label {
+                    margin-left: 30px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    margin-right: 50px;
+                }
+            }
+
+            img {
+                width: 100px;
+                height: 26px;
+            }
+
+            .paypal-id {
+                margin-right: 40px;
+            } 
+        }
+        
+        .payment-card {
+            .card-payment {
+                .form-check-label {
+                    margin-left: 30px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    margin-right: 30px;
+                }
+            }
+
+            img {
+                height: 28px;
+                margin-right: 10px;
+            }
+
+            .accordion-body {
+                    width: 100%;
+                    height: 208px;
+                    background: #F7FAFE;
+                .form {
+                    .form-group {
+                        padding-left: 48px;
+        
+                        .form-input-card-number {
+                            width: 290px;
+                            height: 39px;
+                            border: 1px solid rgba(0, 0, 0, .1);
+                            border-radius: 6px;
+                        }
+        
+                        .card-valid {
+                            display: flex;
+                            margin-top: 10px;
+                            
+                            .card-valid-till {
+                                width: 80px;
+                                height: 39px;
+                                border-radius: 6px;
+                                margin-right: 28px;
+                                border: 1px solid rgba(0, 0, 0, .1);
+                            }
+        
+                            .card-valid-mm {
+                                width: 50px;
+                                height: 39px;
+                                border-radius: 6px;
+                                margin-right: 28px;
+                                border: 1px solid rgba(0, 0, 0, .1);
+                            }
+        
+                            .card-valid-cvv {
+                                width: 123px;
+                                height: 39px;
+                                border-radius: 6px;
+                                border: 1px solid rgba(0, 0, 0, .1);
+                            }
+                        }
+                    }
+        
+                    .submit {
+                        padding-left: 48px;
+                        margin-top: 15px;
+                        .pay-btn {
+                            width: 180px;
+                            height: 44px;
+                            border-radius: 4px;
+                            border: 1px;
+                            font-size: 16px;
+                            font-weight: 600;
+                            line-height: 20px;
+                            letter-spacing: 0em;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        .payment-banking {
+            .net-banking {
+
+                .form-check-label {
+                    margin-left: 30px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    margin-right: 30px;
+                }
+            }
+
+            img {
+                height: 28px;
+            }
+
+            .banking-id {
+                margin-right: 40px;
+            }
+        }
+
+        .payment-cash-on-delivery {
+            .cash {
+                .form-check-label {
+                    margin-left: 30px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .pay-btn {
+        width: 121px;
+        height: 32px;
+        border-radius: 4px;
+        border: 1px;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .modal-footer {
+        justify-content: end;
     }
 }

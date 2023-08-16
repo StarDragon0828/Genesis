@@ -119,16 +119,16 @@ const Header = (props) => {
 
     <Stack className="search-input-container" direction="horizontal">
       <Dropdown>
-      <Dropdown.Toggle variant="success" id="dropdown-basic">
-        All
-      </Dropdown.Toggle>
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          All
+        </Dropdown.Toggle>
 
-      <Dropdown.Menu>
-      {categories.map((category, index) => (
-        <Dropdown.Item key={index} href="">{category}</Dropdown.Item>
-      ))}
-      </Dropdown.Menu>
-    </Dropdown>
+        <Dropdown.Menu>
+        {categories.map((category, index) => (
+          <Dropdown.Item key={index} href="">{category}</Dropdown.Item>
+        ))}
+        </Dropdown.Menu>
+      </Dropdown>
       <Form.Control type="text" placeholder="Search for Products, Brands and More" className="h-100 rounded-0" width={484} />
       <View className="search">
         <FontAwesomeIcon icon="magnifying-glass" fontSize={16}/>
@@ -144,7 +144,9 @@ const Header = (props) => {
 
       <Stack direction="horizontal" className="align-items-center dropdown-container" onMouseEnter={SignMenuhandleMouseEnter} onMouseLeave={SignMenuhandleMouseLeave}>
         <FontAwesomeIcon icon="user" fontSize={16} />
-        <h5 className="dropdown-text">Sign In</h5>
+        <Link to="/login" >
+          <h5 className="dropdown-text">Sign In</h5>
+        </Link>
         <FontAwesomeIcon icon="chevron-down" fontSize={12} />
       </Stack>
       <Stack direction="horizontal" className="align-items-center dropdown-container me-0">
