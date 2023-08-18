@@ -21,7 +21,7 @@ export default function OrderModal(props) {
             </Modal.Body>
             <Modal.Footer>
                 <View className="d-flex align-items-center justify-content-center">
-                    <Button text="Continue Shopping" className="success-btn" onClick={onClick} />
+                    <Button text="Continue Shopping" tooltipText="Click this button to shop." className="success-btn" onClick={onClick} />
                 </View>
             </Modal.Footer>
         </Modal>

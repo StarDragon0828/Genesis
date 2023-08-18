@@ -27,10 +27,18 @@ import MemberLogin from "../views/Auth/member/member-login";
 import GiftCard from "../views/Gift/Gift-card";
 import MyGiftCard from "../views/Gift/Gift-card/manage";
 import Birthday from "../views/Gift/Gift-card/card-type/birthday";
-import SpecialDay from "../views/Gift/Gift-card/card-type/special-day";
-import SpecialSomeone from "../views/Gift/Gift-card/card-type/someone";
 import Wedding from "../views/Gift/Gift-card/card-type/wedding";
 import BabyGift from "../views/Gift/Gift-card/card-type/baby";
+import SpecialDay from "../views/Gift/Gift-card/card-type/special-day/special-day";
+import WomenDay from "../views/Gift/Gift-card/card-type/special-day/women-day";
+import ManDay from "../views/Gift/Gift-card/card-type/special-day/man-day";
+import BeautifulDay from "../views/Gift/Gift-card/card-type/special-day/beautiful-day";
+import ChristmasDay from "../views/Gift/Gift-card/card-type/special-day/christmas";
+import SpecialSomeone from "../views/Gift/Gift-card/card-type/someone/someone";
+import MomCard from "../views/Gift/Gift-card/card-type/someone/mom";
+import DadCard from "../views/Gift/Gift-card/card-type/someone/dad";
+import GirlfriendCard from "../views/Gift/Gift-card/card-type/someone/girl";
+import BestfriendCard from "../views/Gift/Gift-card/card-type/someone/best";
 
 export const routes = createBrowserRouter([
   {
@@ -138,8 +146,40 @@ export const routes = createBrowserRouter([
     element: <PublicLayout view={<SpecialDay/>}/>
   },
   {
+    path: "/giftcard/specialdaycard/womenday",
+    element: <PublicLayout view={<WomenDay/>}/>
+  },
+  {
+    path: "/giftcard/specialdaycard/manday",
+    element: <PublicLayout view={<ManDay/>}/>
+  },
+  {
+    path: "/giftcard/specialdaycard/beautifulday",
+    element: <PublicLayout view={<BeautifulDay/>}/>
+  },
+  {
+    path: "/giftcard/specialdaycard/christmasday",
+    element: <PublicLayout view={<ChristmasDay/>}/>
+  },
+  {
     path: "/giftcard/specialsomeone",
     element: <PublicLayout view={<SpecialSomeone/>}/>
+  },
+  {
+    path: "/giftcard/specialsomeone/mom",
+    element: <PublicLayout view={<MomCard/>}/>
+  },
+  {
+    path: "/giftcard/specialsomeone/dad",
+    element: <PublicLayout view={<DadCard/>}/>
+  },
+  {
+    path: "/giftcard/specialsomeone/girlfriend",
+    element: <PublicLayout view={<GirlfriendCard/>}/>
+  },
+  {
+    path: "/giftcard/specialsomeone/bestfriend",
+    element: <PublicLayout view={<BestfriendCard/>}/>
   },
   {
     path: "/giftcard/wedding",

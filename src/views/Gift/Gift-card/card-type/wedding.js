@@ -67,7 +67,11 @@ export default function Wedding(props) {
                                     <View className="d-flex" >
                                         <View className="d-flex align-items-center">
                                             <h5 className='card-name' >{item.title}</h5>
-                                            <h5 className='card-value text-primary'>{item.value}</h5>
+                                            <h5 className='card-value' >{item.value}</h5>
+                                            <View className="input-contain">
+                                                <h5 className="card-value" >$</h5>
+                                                <input type="number" className="value-input" />
+                                            </View>
                                         </View>
                                     </View>
                                 </View>

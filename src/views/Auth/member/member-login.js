@@ -22,7 +22,7 @@ const MemberLogin = (props) => {
         </Link>
       </View>
       <View className="create-account-link">
-        <h5 to="/signup" className="text-primary">New to Genesis? Create an account</h5>
+        <h5 to="/signup" className="text-primary">New to Gnsiss? Create an account</h5>
       </View>
     </View>
   </AuthLayout>

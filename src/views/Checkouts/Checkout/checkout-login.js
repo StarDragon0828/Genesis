@@ -33,7 +33,7 @@ let content;
                             <Link to="/signup" >Don’t have an account?</Link>
                         </View>
                         <Agree className="agree" />
-                        <Button text="Continue" className="continue-btn" onClick={props.handleClick} />
+                        <Button text="Continue" tooltipText="Click this button to go to the delivery address." className="continue-btn" onClick={props.handleClick} />
                     </Form>
                 </View>
                 <View className="login-body-right" >

@@ -7,6 +7,7 @@ import { useState } from 'react';
 import paypalImage from '../../../assets/images/chekout/paymentMethod/paypal.png';
 import walletImage from '../../../assets/images/chekout/paymentMethod/wallet.png';
 import bankImage from '../../../assets/images/chekout/paymentMethod/bank.png';
+import giftcardImage from '../../../assets/images/chekout/paymentMethod/giftcard.png'
 import {paymentOptionImage} from './data'
 
 
@@ -45,7 +46,7 @@ export default function PaymentOption(props) {
                                                     <Form.Control type="text" placeholder="UPI ID"/>
                                                 </FormGroup>
                                                 <View>
-                                                    <Button text="Pay $999.00" className="payment-btn" onClick={handleOpenModal} />
+                                                    <Button text="Pay" tooltipText="Click this button to make payment." className="payment-btn" onClick={handleOpenModal} />
                                                 </View>
                                             </Form>
                                         </Accordion.Body>
@@ -63,7 +64,7 @@ export default function PaymentOption(props) {
                                                     <Form.Control type="text" placeholder="Wallet Address"/>
                                                 </FormGroup>
                                                 <View>
-                                                    <Button text="Pay $999.00" className="payment-btn" onClick={handleOpenModal} />
+                                                    <Button text="Pay" tooltipText="Click this button to make payment." className="payment-btn" onClick={handleOpenModal} />
                                                 </View>
                                             </Form>
                                         </Accordion.Body>
@@ -81,7 +82,7 @@ export default function PaymentOption(props) {
                                                     <Form.Control type="text" placeholder="PayPal Address"/>
                                                 </FormGroup>
                                                 <View>
-                                                    <Button text="Pay $999.00" className="payment-btn" onClick={handleOpenModal} />
+                                                    <Button text="Pay" tooltipText="Click this button to make payment." className="payment-btn" onClick={handleOpenModal} />
                                                 </View>
                                             </Form>
                                         </Accordion.Body>
@@ -107,7 +108,7 @@ export default function PaymentOption(props) {
                                                     </View>
                                                 </FormGroup>
                                                 <View className="submit">
-                                                    <Button text="Pay $999.00" className="pay-btn" onClick={handleOpenModal} />
+                                                    <Button text="Pay" tooltipText="Click this button to make payment." className="pay-btn" onClick={handleOpenModal} />
                                                 </View>
                                             </Form>
                                         </Accordion.Body>
@@ -125,7 +126,25 @@ export default function PaymentOption(props) {
                                                     <Form.Control type="text" placeholder="Address"/>
                                                 </FormGroup>
                                                 <View>
-                                                    <Button text="Pay $999.00" className="payment-btn" onClick={handleOpenModal}/>
+                                                    <Button text="Pay" tooltipText="Click this button to make payment." className="payment-btn" onClick={handleOpenModal}/>
+                                                </View>
+                                            </Form>
+                                        </Accordion.Body>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey='5' className='payment-gift'>
+                                        <Accordion.Header>
+                                            <View className="gift-card" >
+                                                <FormCheck type="radio" id="radio6" label="Do you have gift cards?  Would you like to pay with a gift card?" name="myRadioGroup" />
+                                            </View>
+                                            <Image src={giftcardImage} />
+                                        </Accordion.Header>
+                                        <Accordion.Body>
+                                            <Form className='d-flex align-items-center' >
+                                                <FormGroup className='gift-id' >
+                                                    <Form.Control type="text" placeholder="Please Enter Number"/>
+                                                </FormGroup>
+                                                <View>
+                                                    <Button text="Pay" tooltipText="Click this button to make payment." className="payment-btn" onClick={handleOpenModal}/>
                                                 </View>
                                             </Form>
                                         </Accordion.Body>

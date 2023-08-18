@@ -34,7 +34,7 @@ export default function AddressNone(props) {
                                     <Link to="#" className='link-none' ><h5 className='edit text-primary' >EDIT</h5></Link>
                                 </View>
                                 <View>
-                                    <Button text="Deliver Here" className="deliver-btn" onClick={props.handleClick}/>
+                                    <Button text="Deliver Here" tooltipText="Click this button to go to the order summary." className="deliver-btn" onClick={props.handleClick}/>
                                 </View>
                             </View>
                         ))}

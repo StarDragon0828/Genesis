@@ -1,33 +1,37 @@
-import { Accordion, Dropdown, Form, FormCheck, FormGroup, Image, Modal } from 'react-bootstrap';
+import { Image} from 'react-bootstrap';
 import View from '../../../components/UI/View';
 import Button from '../../../components/UI/Button'
 import './style.scss';
 import { Link } from 'react-router-dom';
-import {giftcard} from './data';
 import GiftImage from '../../../assets/images/gift-card/gift.png';
 import GiftCardImage from '../../../assets/images/gift-card/giftcard.png';
 import AccountImage from '../../../assets/images/gift-card/account.png';
-import { useState } from 'react';
-import paypalImage from '../../../assets/images/chekout/paymentMethod/paypal.png';
-import walletImage from '../../../assets/images/chekout/paymentMethod/wallet.png';
-import bankImage from '../../../assets/images/chekout/paymentMethod/bank.png';
-import {paymentOptionImage} from './data'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import MyImage from '../../../assets/images/gift-card/giftcard.png'
+import { giftcardImageBar } from './data'
+import { useEffect, useRef } from 'react';
 
 
 export default function CardProfile(props) {
 
-    const [showBuyModal, setShowBuyModal] = useState(false);
+    const userName = localStorage.getItem("auth-name");
 
-    const handleCloseModal = () => {
-        setShowBuyModal(false);
-    }
-
-    const handleOpenModal = () => {
-        setShowBuyModal(true);
-    }
 
     return (
         <View>
+            <View className="gift-card-content">
+                <h5>Dear Mr. {userName}.<br/>
+                    This is the time on such a special day that you love a giftcard, special learning and want to give him the gift with your wish him only good things with Gnsiss, just please choose only the best for your loved one.
+                </h5>
+            </View>
+            <View className="gift-card-scroll-bar">
+                <View className="image-container">
+                    {giftcardImageBar.map((item, index) => (
+                        <Image key={index} src={item.image} />
+                    ))}
+                </View>
+            </View>
             <View className="gift-card-page">
                 <View >
                     <h5 className='title' >Gift Card</h5>
@@ -79,138 +83,26 @@ export default function CardProfile(props) {
                 </View>
                 <h5 className='title' >Gift Card</h5> 
                 <View className="details" >
-                    <View className="card-details" >
-                        {giftcard.giftCard.map((item) => (
-                            <View className="card-component">
-                                <View className="d-flex align-items-center" >
-                                    <Image src={item.image}/>
-                                    <View className="d-flex" >
-                                        <View className="d-flex align-items-center">
-                                            <h5 className='card-name' >{item.title}</h5>
-                                            <h5 className='card-value text-primary'>{item.value}</h5>
-                                        </View>
-                                    </View>
-                                </View>
-                                <View className="d-flex align-items-center justify-content-between" >
-                                    <h5 className='description' >{item.description}</h5>
-                                    <View>
-                                        <Button text="Buy" className='buy-btn' onClick={handleOpenModal}  />
-                                    </View>
-                                </View>
-                            </View>
-                        ))}
+                    <View className="do-details" >
+                        <h5 className="title" >You can...</h5>
+                        <View className="d-flex align-items-center">
+                            <FontAwesomeIcon icon={faCheck} />
+                            <h5 className="do-list">Add Your Photo</h5>
+                        </View>
+                        <View className="d-flex align-items-center">
+                            <FontAwesomeIcon icon={faCheck} />
+                            <h5 className="do-list">Send Text</h5>
+                        </View>
+                        <View className="d-flex align-items-center">
+                            <FontAwesomeIcon icon={faCheck} />
+                            <h5 className="do-list">Send a gift card to anyone you want</h5>
+                        </View>
+                    </View>
+                    <View>
+                        <Image src={MyImage} />
                     </View>
                 </View>
             </View>
-            <Modal show={showBuyModal} onHide={handleCloseModal} centered >
-                <Modal.Header closeButton>
-                    <Modal.Title className='pay-title' >Gift Card Purchase Payment</Modal.Title>
-                </Modal.Header>
-                <Modal.Body className='pay-body'>
-                    <Accordion>
-                        <Accordion.Item eventKey='0' className='payment-upi'>
-                            <Accordion.Header>
-                            <View className="upi" >
-                                <FormCheck type="radio" id="radio1" label="UPI" name="myRadioGroup" />
-                            </View>
-                            </Accordion.Header>
-                            <Accordion.Body>
-                                <Form className='d-flex align-items-center' >
-                                    <FormGroup className='upi-id' >
-                                        <Form.Control type="text" placeholder="UPI ID"/>
-                                    </FormGroup>
-                                    <View>
-                                        <Button text="Pay $999.00" className="payment-btn" onClick={handleCloseModal}/>
-                                    </View>
-                                </Form>
-                            </Accordion.Body>
-                        </Accordion.Item>
-                        <Accordion.Item eventKey='1' className='payment-wallets'>
-                            <Accordion.Header>
-                                <View className="wallets" >
-                                    <FormCheck type="radio" id="radio2" label="Wallets" name="myRadioGroup" />
-                                </View>
-                                <Image src={walletImage} />
-                            </Accordion.Header>
-                            <Accordion.Body>
-                                <Form className='d-flex align-items-center' >
-                                    <FormGroup className='wallet-id' >
-                                        <Form.Control type="text" placeholder="Wallet Address"/>
-                                    </FormGroup>
-                                    <View>
-                                        <Button text="Pay $999.00" className="payment-btn" onClick={handleCloseModal} />
-                                    </View>
-                                </Form>
-                            </Accordion.Body>
-                        </Accordion.Item>
-                        <Accordion.Item eventKey='2' className='payment-paypal'>
-                            <Accordion.Header>
-                                <View className="paypal" >
-                                    <FormCheck type="radio" id="radio3" label="Paypal" name="myRadioGroup" />
-                                </View>
-                                <Image src={paypalImage} />
-                            </Accordion.Header>
-                            <Accordion.Body>
-                                <Form className='d-flex align-items-center' >
-                                    <FormGroup className='paypal-id' >
-                                        <Form.Control type="text" placeholder="PayPal Address"/>
-                                    </FormGroup>
-                                    <View>
-                                        <Button text="Pay $999.00" className="payment-btn" onClick={handleCloseModal} />
-                                    </View>
-                                </Form>
-                            </Accordion.Body>
-                        </Accordion.Item>
-                        <Accordion.Item eventKey='3' className='payment-card' >
-                            <Accordion.Header>
-                                <View className="card-payment" >
-                                    <FormCheck type="radio" id="radio4" label="Credit / Debit / ATM Card" name="myRadioGroup" />
-                                </View>
-                                {paymentOptionImage.map((item) => (
-                                    <Image src={item.image} />
-                                ))}
-                            </Accordion.Header>
-                            <Accordion.Body className='accordion-body'>
-                                <Form className='form'>
-                                    <FormGroup className='form-group' >
-                                        <Form.Control type="text" placeholder="Enter Card Number" className='form-input-card-number' />
-                                        <View className="card-valid" >
-                                            <Form.Control type="text" placeholder="Valid till" className='card-valid-till' />
-                                            <Form.Control type="text" placeholder="MM" className='card-valid-mm' />
-                                            <Form.Control type="text" placeholder="YY" className='card-valid-mm' />
-                                            <Form.Control type="text" placeholder="CVV" className='card-valid-cvv' />
-                                        </View>
-                                    </FormGroup>
-                                    <View className="submit">
-                                        <Button text="Pay $999.00" className="pay-btn" onClick={handleCloseModal} />
-                                    </View>
-                                </Form>
-                            </Accordion.Body>
-                        </Accordion.Item>
-                        <Accordion.Item eventKey='4' className='payment-banking'>
-                            <Accordion.Header>
-                                <View className="net-banking" >
-                                    <FormCheck type="radio" id="radio5" label="Net Banking" name="myRadioGroup" />
-                                </View>
-                                <Image src={bankImage} />
-                            </Accordion.Header>
-                            <Accordion.Body>
-                                <Form className='d-flex align-items-center' >
-                                    <FormGroup className='banking-id' >
-                                        <Form.Control type="text" placeholder="Address"/>
-                                    </FormGroup>
-                                    <View>
-                                        <Button text="Pay $999.00" className="payment-btn" onClick={handleCloseModal}/>
-                                    </View>
-                                </Form>
-                            </Accordion.Body>
-                        </Accordion.Item>
-                    </Accordion>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button text="Pay" className="pay-btn" onClick={handleCloseModal} ></Button>
-                </Modal.Footer>
-            </Modal>
         </View>
     );
 }

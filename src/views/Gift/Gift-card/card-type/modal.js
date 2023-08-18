@@ -66,7 +66,7 @@ export default function GiftCardModal(props) {
                                         <Form.Control type="text" placeholder="UPI ID"/>
                                     </FormGroup>
                                     <View>
-                                        <Button text="Pay $999.00" className="payment-btn" onClick={onClick}/>
+                                        <Button text="Pay" className="payment-btn" onClick={onClick}/>
                                     </View>
                                 </Form>
                             </Accordion.Body>
@@ -84,7 +84,7 @@ export default function GiftCardModal(props) {
                                         <Form.Control type="text" placeholder="Wallet Address"/>
                                     </FormGroup>
                                     <View>
-                                        <Button text="Pay $999.00" className="payment-btn" onClick={onClick} />
+                                        <Button text="Pay" className="payment-btn" onClick={onClick} />
                                     </View>
                                 </Form>
                             </Accordion.Body>
@@ -102,7 +102,7 @@ export default function GiftCardModal(props) {
                                         <Form.Control type="text" placeholder="PayPal Address"/>
                                     </FormGroup>
                                     <View>
-                                        <Button text="Pay $999.00" className="payment-btn" onClick={onClick} />
+                                        <Button text="Pay" className="payment-btn" onClick={onClick} />
                                     </View>
                                 </Form>
                             </Accordion.Body>
@@ -128,7 +128,7 @@ export default function GiftCardModal(props) {
                                         </View>
                                     </FormGroup>
                                     <View className="submit">
-                                        <Button text="Pay $999.00" className="pay-btn" onClick={onClick} />
+                                        <Button text="Pay" className="pay-btn" onClick={onClick} />
                                     </View>
                                 </Form>
                             </Accordion.Body>
@@ -146,7 +146,7 @@ export default function GiftCardModal(props) {
                                         <Form.Control type="text" placeholder="Address"/>
                                     </FormGroup>
                                     <View>
-                                        <Button text="Pay $999.00" className="payment-btn" onClick={onClick}/>
+                                        <Button text="Pay" className="payment-btn" onClick={onClick}/>
                                     </View>
                                 </Form>
                             </Accordion.Body>

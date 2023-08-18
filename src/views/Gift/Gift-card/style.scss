@@ -1,6 +1,54 @@
 .giftcard-mainpage {
     padding: 40px 20px 40px 20px;
 
+    .gift-card-content {
+        width: 100%;
+        height: 101px;
+        background: #FFC011;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+
+        h5 {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: left; 
+            margin-bottom: 0;
+        }
+    }
+
+    .gift-card-scroll-bar {
+        display: flex;
+        overflow: hidden;
+        margin-bottom: 50px;
+
+        .image-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            animation: scrollImages 10s linear infinite;
+
+            img {
+                max-width: 100%;
+                height: 150px;
+                flex: 0 0 auto;
+            }
+        }
+
+        @keyframes scrollImages {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
+        }
+    }
+
     .gift-card-page {
         width: 100%;
         height: 200px;
@@ -129,14 +177,13 @@
 
     .gift-card-main {
         width: 100%;
-        height: 820px;
+        height: 500px;
         border-radius: 8px;
         cursor: pointer;
         border: 1px;
         padding: 15px;
         background: white;
         border: 1px solid rgba(0, 0, 0, .1);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
         margin-top: 30px;
         overflow: auto;
 
@@ -184,7 +231,6 @@
                 text-decoration: none;
 
                 .someone-btn {
-                    width: 170px;
                     height: 44px;
                     border-radius: 4px;
                     border: 1px;
@@ -239,12 +285,42 @@
             margin-top: 10px;
         }
 
+        .do-list {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: left; 
+            margin-bottom: 0;
+            margin-left: 10px;
+        }
+
         .details {
             display: flex;
+            justify-content: space-between;
+            padding: 20px;
             gap: 10px;
 
+            .do-details {
+
+
+                .title {
+                    font-size: 22px;
+                    font-weight: 700;
+                    line-height: 28px;
+                    letter-spacing: 0em;
+                    text-align: left; 
+                    margin-bottom: 10px; 
+                    margin-top: 10px;
+                }
+            }
+
+            img {
+                height: 300px;
+            }
+
             .card-details {
-                width: 100%;
+                width: 50%;
 
                 .card-component {
                     width: 100%;
@@ -255,7 +331,6 @@
                     padding: 15px;
                     background: white;
                     border: 1px solid rgba(0, 0, 0, .1);
-                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
                     margin-bottom: 5px;
 
                     img {
@@ -326,7 +401,7 @@
 
     .pay-body {
         .payment-btn {
-            width: 180px;
+            width: 80px;
             height: 40px;
             border-radius: 4px;
             border: 1px;
@@ -465,7 +540,7 @@
                         padding-left: 48px;
                         margin-top: 15px;
                         .pay-btn {
-                            width: 180px;
+                            width: 80px;
                             height: 44px;
                             border-radius: 4px;
                             border: 1px;

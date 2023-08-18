@@ -2,11 +2,11 @@ import { Container, Dropdown, Image } from "react-bootstrap";
 import View from "../../UI/View";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./style.scss";
-import { faCaretRight, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faCaretRight, faChevronDown, faGift, faGifts } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-// import myImage from '../../../assets/images/home/navbar-club.png';
 import myImage from '../../../assets/images/product/2.png'
 import memberImage from '../../../assets/images/home/navbar-member.png'
+import giftImage from '../../../assets/images/home/navbar-gift.png'
 import { Link } from "react-router-dom";
 
 
@@ -337,6 +337,11 @@ const Navbar = (props) => {
             </View>
           </Dropdown.Menu>
         </Dropdown>
+        <View className="navbar-gift">
+          <Link to="/giftcard">
+            <Image src={giftImage}/> 
+          </Link>
+        </View>
       </View>
     </Container>
   </View>

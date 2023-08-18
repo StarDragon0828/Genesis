@@ -34,7 +34,7 @@ export const RecentItem = (props) => {
                     <Rating initialValue={4} size={13} />
                 </Stack>
                 <h5 className="details-price text-primary" >${recentItem.price.toFixed(2)}</h5>
-                <Button className="add-to-cart" text="Add to Cart" />
+                <Button className="add-to-cart" tooltipText="You can add this item to your cart." text="Add to Cart" />
             </View>
         </Stack>
     </View>

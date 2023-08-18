@@ -58,7 +58,7 @@ const Footer = () => {
         </Stack>
       </Col>
     </Row>
-    <View className="footer-text">© 2023 Genesis. All Rights Reserved.</View>
+    <View className="footer-text">© 2023 Gnsiss. All Rights Reserved.</View>
   </footer>
 }
 

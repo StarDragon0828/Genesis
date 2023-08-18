@@ -7,7 +7,9 @@ import Agree from "../../../components/layout/auth/agree";
 import Button from "../../../components/UI/Button";
 import AuthLayout from "../../../components/layout/auth/layout";
 import View from "../../../components/UI/View";
+import { useSnackbar  } from "notistack";
 import MyNotification from "../notification";
+import Axios from "axios";
 
 const Signup = (props) => {
   const [name, setName] = useState("");
@@ -16,8 +18,11 @@ const Signup = (props) => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [validationErrors, setValidationErrors] = useState({});
   const [showNotification, setShowNotification] = useState(false);
+  const [error, setError] = useState();
+  const userName = localStorage.getItem("auth-name");
+  const { enqueueSnackbar } = useSnackbar();
 
-  const onSubmit = (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
 
     const errors = {};
@@ -47,6 +52,15 @@ const Signup = (props) => {
       setTimeout(() => {
         setShowNotification(false);
       }, 1000);
+    }
+
+    try {
+      const newUser = { name, email, password, passwordCheck:confirmPassword };
+      await Axios.post("http://localhost:5000/users/register", newUser);
+      enqueueSnackbar({'variant':'success','message':'Sign up Success!'});
+    } catch (err) {
+      err.response.data.msg && setError(err.response.data.msg);
+      console.log(error);
     }
   };
 

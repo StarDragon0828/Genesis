@@ -8,29 +8,23 @@ import { useState } from "react";
 
 const Header = (props) => {
 
-  const [targetDiv, setTargetDiv] = useState(null);
-  const [signmenuHovered, setSignmenuHovered] = useState(false);
-  const [languageHovered, setLanguageHovered] = useState(false);
+  const [showLanguageMenu, setShowLanguageMenu] = useState(false);
+  const [showSignMenu, setShowSignMenu] = useState(false);
+  const userName = localStorage.getItem("auth-name");
 
-  const SignMenuhandleMouseEnter = () => {
-    setSignmenuHovered(true);
-  };
-
-  const SignMenuhandleMouseLeave = () => {
-    setSignmenuHovered(false);
-  };
+  const logOut = () => {
+    console.log("logOut");
+    localStorage.setItem("auth-name",'');
+    localStorage.setItem("auth-token",'');
+  }
   
-  const LanMenuhandleMouseEnter = () => {
-    setLanguageHovered(true);
+  const handleShowLanguageMenu = () => {
+    setShowLanguageMenu(!showLanguageMenu);
   };
 
-  const LanMenuhandleMouseLeave = () => {
-    setLanguageHovered(false);
-  };
-
-  const handleTargetDivRef = (element) => {
-    setTargetDiv(element);
-  };
+  const handleShowSignMenu = () => {
+    setShowSignMenu(!showSignMenu);
+  }
 
   const categories = [
     "Pneumatics",
@@ -104,7 +98,7 @@ const Header = (props) => {
 
   return <Container fluid className="header bg-primary">
     <View className="d-flex align-items-center">
-      <Link to="/" className="logo me-4">Gensis</Link>
+      <Link to="/" className="logo me-4">Gnsiss</Link>
 
       <Stack className="address-container" direction="horizontal">
         <FontAwesomeIcon icon="map-marker-alt" />
@@ -136,19 +130,105 @@ const Header = (props) => {
     </Stack>
 
     <Stack direction="horizontal">
-      <Stack direction="horizontal" className="align-items-center dropdown-container" onMouseEnter={LanMenuhandleMouseEnter} onMouseLeave={LanMenuhandleMouseLeave}>
-          <img src="https://flagcdn.com/32x24/us.png" alt="US flag" />
-          <h5 className="dropdown-text">EN</h5>
-          <FontAwesomeIcon icon="chevron-down" fontSize={12} />
-      </Stack>
+        <Dropdown show={showLanguageMenu} onMouseEnter={handleShowLanguageMenu} onMouseLeave={handleShowLanguageMenu} className="language-dropdown">
+          <Dropdown.Toggle variant="success" id="dropdown-language" >
+            <img src="https://flagcdn.com/32x24/us.png" alt="US flag" />
+            <h5 className="dropdown-text">EN</h5>
+            <FontAwesomeIcon icon="chevron-down" fontSize={12} />
+          </Dropdown.Toggle>
 
-      <Stack direction="horizontal" className="align-items-center dropdown-container" onMouseEnter={SignMenuhandleMouseEnter} onMouseLeave={SignMenuhandleMouseLeave}>
-        <FontAwesomeIcon icon="user" fontSize={16} />
-        <Link to="/login" >
-          <h5 className="dropdown-text">Sign In</h5>
-        </Link>
-        <FontAwesomeIcon icon="chevron-down" fontSize={12} />
-      </Stack>
+          <Dropdown.Menu className="language-hovered">
+            <h5 className="title" >Change Language</h5>
+            <View className="select" >
+              <View className="english">
+                <FormCheck type="radio" id="radio1" label="English" name="languageGroup" />
+              </View>
+              <View className="more-language" >
+                <FormCheck type="radio" id="radio2" label="French" name="languageGroup" />
+                <FormCheck type="radio" id="radio3" label="German" name="languageGroup" />
+                <FormCheck type="radio" id="radio4" label="Arabic" name="languageGroup" />
+                <FormCheck type="radio" id="radio5" label="Spanish" name="languageGroup" />
+                <FormCheck type="radio" id="radio6" label="Romanian" name="languageGroup" />
+                <Link to="/languagesetting" >
+                  <h5 className="view-more text-primary" >VIEW MORE</h5>
+                </Link>
+              </View>
+              <View className="change-currency">
+                <h5 className="title" >Change Currency</h5>
+                <View className="currency-detail" >
+                  <h5 className="currency" >$ - USD - US Dollar</h5>
+                  <Link to="/countrysetting" >
+                    <h5 className="change text-primary" >Change</h5>
+                  </Link>
+                </View>
+              </View>
+              <View className="change-country" >
+                <View className="detail" >
+                  <img src="https://flagcdn.com/32x24/us.png" alt="US flag" className="img-flag"/>
+                  <h5 className="description" >You are shipping on Gnsiss.com</h5>
+                </View>
+                <Link to="/countrysetting">
+                  <h5 className="change text-primary" >Change Country/Region</h5>
+                </Link>
+              </View>
+            </View>
+          </Dropdown.Menu>
+        </Dropdown>
+        <Dropdown show={showSignMenu} onMouseEnter={handleShowSignMenu} onMouseLeave={handleShowSignMenu} className="sign-dropdown">
+          <Dropdown.Toggle variant="success" id="dropdown-singmenu" >
+            <FontAwesomeIcon icon="user" fontSize={16} />
+              <Link to="/login" >
+                {userName ? <h5 className="dropdown-text">{userName}</h5>
+                : <h5 className="dropdown-text">Sign In</h5>}
+              </Link>
+            <FontAwesomeIcon icon="chevron-down" fontSize={12} />
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu className={`signin ${userName ? 'signin-hovered' : ''}`} >
+            <View className="menu-title" >
+              <h5 className="new-customer" >New Customer?</h5>
+              <Link to="/signup" >
+                <h5 className="signup text-primary" >Sign Up</h5>
+              </Link>
+            </View>
+            <View className="my-profile" >
+              <Link to="/myprofile" >
+                <FontAwesomeIcon icon={faCircleUser} className="icon" />
+                <h5 className="profile-title" >My Profile</h5>
+              </Link>
+            </View>
+            <View className="orders" >
+              <Link to="/myprofile/myorders" >
+                <FontAwesomeIcon icon={faUserPen} className="icon" />
+                <h5 className="title" >Orders</h5>
+              </Link>
+            </View>
+            <View className="wishlist" >
+              <Link to="/myprofile/wishlist" >
+                <FontAwesomeIcon icon={faHeart} className="icon" />
+                <h5 className="title" >Wishlist</h5>
+              </Link>
+            </View>
+            <View className="rewards" >
+              <Link to="" >
+                <FontAwesomeIcon icon={faGift} className="icon" />
+                <h5 className="title" >Rewards</h5>
+              </Link>
+            </View>
+            <View className="gift-card" >
+              <Link to="/giftcard" >
+                <FontAwesomeIcon icon={faWallet} className="icon" />
+                <h5 className="title" >Gift Cards</h5>
+              </Link>
+            </View>
+            { userName && <View className="logout" >
+              <Link to="/">
+                <FontAwesomeIcon icon={faWallet} className="icon" />
+                <h5 onClick={()=> logOut()} className="title" >Log Out</h5>
+              </Link>
+            </View>}
+          </Dropdown.Menu>
+        </Dropdown>
       <Stack direction="horizontal" className="align-items-center dropdown-container me-0">
         <Link to="/cart" direction="horizontal">
           <FontAwesomeIcon icon="cart-shopping" fontSize={16} />
@@ -156,80 +236,6 @@ const Header = (props) => {
         </Link>
       </Stack>
     </Stack>
-    <View className={ signmenuHovered ? 'signin-hovered' : 'signin-menu' } ref={handleTargetDivRef} onMouseEnter={SignMenuhandleMouseEnter} onMouseLeave={SignMenuhandleMouseLeave}>
-      <View className="menu-title" >
-        <h5 className="new-customer" >New Customer?</h5>
-        <Link to="/signup" >
-          <h5 className="signup text-primary" >Sign Up</h5>
-        </Link>
-      </View>
-      <View className="my-profile" >
-        <Link to="/myprofile" >
-          <FontAwesomeIcon icon={faCircleUser} className="icon" />
-          <h5 className="profile-title" >My Profile</h5>
-        </Link>
-      </View>
-      <View className="orders" >
-        <Link to="/myprofile/myorders" >
-          <FontAwesomeIcon icon={faUserPen} className="icon" />
-          <h5 className="title" >Orders</h5>
-        </Link>
-      </View>
-      <View className="wishlist" >
-        <Link to="/myprofile/wishlist" >
-          <FontAwesomeIcon icon={faHeart} className="icon" />
-          <h5 className="title" >Wishlist</h5>
-        </Link>
-      </View>
-      <View className="rewards" >
-        <Link to="" >
-          <FontAwesomeIcon icon={faGift} className="icon" />
-          <h5 className="title" >Rewards</h5>
-        </Link>
-      </View>
-      <View className="gift-card" >
-        <Link to="/giftcard" >
-          <FontAwesomeIcon icon={faWallet} className="icon" />
-          <h5 className="title" >Gift Cards</h5>
-        </Link>
-      </View>
-    </View>
-    <View className={ languageHovered ? 'language-hovered' : 'language-menu' } ref={handleTargetDivRef} onMouseEnter={LanMenuhandleMouseEnter} onMouseLeave={LanMenuhandleMouseLeave} >
-      <h5 className="title" >Change Language</h5>
-      <View className="select" >
-        <View className="english">
-          <FormCheck type="radio" id="radio1" label="English" name="languageGroup" />
-        </View>
-        <View className="more-language" >
-          <FormCheck type="radio" id="radio2" label="French" name="languageGroup" />
-          <FormCheck type="radio" id="radio3" label="German" name="languageGroup" />
-          <FormCheck type="radio" id="radio4" label="Arabic" name="languageGroup" />
-          <FormCheck type="radio" id="radio5" label="Spanish" name="languageGroup" />
-          <FormCheck type="radio" id="radio6" label="Romanian" name="languageGroup" />
-          <Link to="/languagesetting" >
-            <h5 className="view-more text-primary" >VIEW MORE</h5>
-          </Link>
-        </View>
-        <View className="change-currency">
-          <h5 className="title" >Change Currency</h5>
-          <View className="currency-detail" >
-            <h5 className="currency" >$ - USD - US Dollar</h5>
-            <Link to="/countrysetting" >
-              <h5 className="change text-primary" >Change</h5>
-            </Link>
-          </View>
-        </View>
-        <View className="change-country" >
-          <View className="detail" >
-            <img src="https://flagcdn.com/32x24/us.png" alt="US flag" className="img-flag"/>
-            <h5 className="description" >You are shipping on Genesis.com</h5>
-          </View>
-          <Link to="/countrysetting">
-            <h5 className="change text-primary" >Change Country/Region</h5>
-          </Link>
-        </View>
-      </View>
-    </View>
   </Container>
 }
 

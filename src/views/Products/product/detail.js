@@ -229,7 +229,7 @@ export default function ProductDetail(props) {
               </Accordion.Header>
               <Accordion.Body>
                 <View>
-                  <h5 className="body-description" >Genesis uses advanced security measures to protect your personal and financial information during the purchase process.</h5>
+                  <h5 className="body-description" >Gnsiss uses advanced security measures to protect your personal and financial information during the purchase process.</h5>
                 </View>
               </Accordion.Body>
             </Accordion.Item>

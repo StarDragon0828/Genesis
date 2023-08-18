@@ -56,3 +56,81 @@ export const paymentOptionImage = [
     image: require("../../../assets/images/chekout/paymentMethod/Discover.png"),
   },
 ]
+
+export const giftcardImageBar = [
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/1.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/2.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/3.png")
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/4.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/5.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/6.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/7.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/8.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/9.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/10.png")
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/11.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/12.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/13.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/14.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/15.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/16.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/17.png")
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/18.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/19.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/20.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/21.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/22.png")
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/23.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/24.png"),
+  },
+  {
+    image: require("../../../assets/images/gift-card/giftcardmenu/25.png"),
+  },
+]

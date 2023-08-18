@@ -14,7 +14,7 @@ export default function SecurityModal(props) {
                     <Modal.Title className='name-title' >Change Your Name</Modal.Title>
                     </Modal.Header>
                     <Modal.Body className='name-body'>
-                        <p>If you want to change the name associated with your Genesis customer account, you may do so below. Be sure to click the Save Changes button when you are done.</p>
+                        <p>If you want to change the name associated with your Gnsiss customer account, you may do so below. Be sure to click the Save Changes button when you are done.</p>
                         <h5>New Name</h5>
                         <input placeholder='Enter New Name' />
                     </Modal.Body>
@@ -46,7 +46,7 @@ export default function SecurityModal(props) {
                             </Dropdown>
                             <input placeholder='Enter New Number' className='ms-2' />
                         </View>
-                        <p>By enrolling a mobile phone number, you consent to receive automated security notifications via text message from Genesis. Remove your number in Login & Security to cancel. For more information reply HELP. Message and data rates may apply. Message frequency varies.</p>
+                        <p>By enrolling a mobile phone number, you consent to receive automated security notifications via text message from Gnsiss. Remove your number in Login & Security to cancel. For more information reply HELP. Message and data rates may apply. Message frequency varies.</p>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button text="Continue" variant="primary" className="mobile-btn" onClick={onClick} />
@@ -74,7 +74,7 @@ export default function SecurityModal(props) {
                         <Modal.Title className='password-title' >Change Password</Modal.Title>
                     </Modal.Header>
                     <Modal.Body className='password-body'>
-                        <p>Use the form below to change the password for your Genesis account</p>
+                        <p>Use the form below to change the password for your Gnsiss account</p>
                         <h5>Current password:</h5>
                         <input placeholder='Enter Current Password' />
                         <h5>New password:</h5>

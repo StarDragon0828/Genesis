@@ -61,7 +61,7 @@ export default function OrderSummery(props) {
                             ))}
                             <View>
                                 <h5 className='delivery-property' >Delivery in 2 days, Thu| <span className='text-primary' >Free</span></h5>
-                                <Button text="Continue" className="btn"  onClick={props.handleClick} />
+                                <Button text="Continue" className="btn" tooltipText="Click this button to go to payment."  onClick={props.handleClick} />
                             </View>
                         </View>
                         <View className="counter" >
@@ -73,7 +73,7 @@ export default function OrderSummery(props) {
                             <View>
                                 <Button text="REMOVE" className='remove' onClick={removeCounter} />
                             </View>
-                            <Button text="Gift" className="gift-btn" onClick={handleOpenModal} />
+                            <Button text="Gift" className="gift-btn" tooltipText="Click this button to send someone a gift." onClick={handleOpenModal} />
                         </View>
                         <Modal show={showGiftModal} onHide={handleCloseModal} centered>
                             <Modal.Header closeButton>
