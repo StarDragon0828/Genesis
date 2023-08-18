@@ -10,7 +10,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import MyImage from '../../../assets/images/gift-card/giftcard.png'
 import { giftcardImageBar } from './data'
-import { useEffect, useRef } from 'react';
 
 
 export default function CardProfile(props) {

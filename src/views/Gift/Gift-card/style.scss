@@ -23,6 +23,7 @@
 
     .gift-card-scroll-bar {
         display: flex;
+        overflow: auto;
         overflow: hidden;
         margin-bottom: 50px;
 
@@ -30,12 +31,13 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            animation: scrollImages 10s linear infinite;
+            animation: scrollImages 50s linear infinite;
+            animation-iteration-count: infinite;
 
             img {
-                max-width: 100%;
+                width: 230px;
                 height: 150px;
-                flex: 0 0 auto;
+                max-width: 6230px;
             }
         }
 
