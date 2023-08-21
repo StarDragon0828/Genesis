@@ -2,38 +2,38 @@ export const birthday = {
     giftCard: [
       {
         image: require('../../../../assets/images/gift-card/birthday/1.png'),
-        title: "Gift Card 1",
-        description: "You can buy this gift card to send someone a birthday present.",
+        title: "Gift Card",
+        description: "Didn't find the amount of money you want? Please insert your own amount without limit.",
         tip:"Happy Birthday",
         value: "$90"
       },
       {
         image: require('../../../../assets/images/gift-card/birthday/2.png'),
         value: "$100",
-        description: "You can buy this gift card to send someone a birthday present.",
+        description: "Didn't find the amount of money you want? Please insert your own amount without limit.",
         tip:"Happy Birthday",
-        title:"Gift Card 2"
+        title:"Gift Card"
       },
       {
         image: require('../../../../assets/images/gift-card/birthday/3.png'),
         value: "$150",
-        description: "You can buy this gift card to send someone a birthday present.",
+        description: "Didn't find the amount of money you want? Please insert your own amount without limit.",
         tip:"Happy Birthday",
-        title:"Gift Card 3"
+        title:"Gift Card"
       },
       {
         image: require('../../../../assets/images/gift-card/birthday/4.png'),
         value: "$250",
-        description: "You can buy this gift card to send someone a birthday present.",
+        description: "Didn't find the amount of money you want? Please insert your own amount without limit.",
         tip:"Happy Birthday",
-        title:"Gift Card 4"
+        title:"Gift Card"
       },
       {
         image: require('../../../../assets/images/gift-card/birthday/5.png'),
         value: "$350",
-        description: "You can buy this gift card to send someone a birthday present..",
+        description: "Didn't find the amount of money you want? Please insert your own amount without limit.",
         tip:"Happy Birthday",
-        title:"Gift Card 5"
+        title:"Gift Card"
       },
     ],
 }
@@ -42,38 +42,38 @@ export const wedding = {
     giftCard: [
       {
         image: require('../../../../assets/images/gift-card/wedding/1.png'),
-        title: "Gift Card 1",
-        description: "You can buy these gift cards to send to others on your wedding day.",
+        title: "Gift Card",
+        description: "Didn't find the amount of money you want? Please insert your own amount without limit.",
         tip: "Wedding Day",
         value: "$90"
       },
       {
         image: require('../../../../assets/images/gift-card/wedding/2.png'),
         value: "$100",
-        description: "You can buy these gift cards to send to others on your wedding day.",
+        description: "Didn't find the amount of money you want? Please insert your own amount without limit.",
         tip: "Wedding Day",
-        title:"Gift Card 2"
+        title:"Gift Card"
       },
       {
         image: require('../../../../assets/images/gift-card/wedding/3.png'),
         value: "$150",
-        description: "You can buy these gift cards to send to others on your wedding day.",
+        description: "Didn't find the amount of money you want? Please insert your own amount without limit.",
         tip: "Wedding Day",
-        title:"Gift Card 3"
+        title:"Gift Card"
       },
       {
         image: require('../../../../assets/images/gift-card/wedding/4.png'),
         value: "$250",
-        description: "You can buy these gift cards to send to others on your wedding day.",
+        description: "Didn't find the amount of money you want? Please insert your own amount without limit.",
         tip: "Wedding Day",
-        title:"Gift Card 4"
+        title:"Gift Card"
       },
       {
         image: require('../../../../assets/images/gift-card/wedding/5.png'),
         value: "$350",
-        description: "You can buy these gift cards to send to others on your wedding day.",
+        description: "Didn't find the amount of money you want? Please insert your own amount without limit.",
         tip: "Wedding Day",
-        title:"Gift Card 5"
+        title:"Gift Card"
       },
     ],
 }
@@ -82,38 +82,38 @@ export const baby = {
     giftCard: [
       {
         image: require('../../../../assets/images/gift-card/baby/1.png'),
-        title: "Gift Card 1",
-        description: "You can buy this gift card to send someone a gift for new baby.",
+        title: "Gift Card",
+        description: "Didn't find the amount of money you want? Please insert your own amount without limit.",
         tip: "New baby",
         value: "$90"
       },
       {
         image: require('../../../../assets/images/gift-card/baby/2.png'),
         value: "$100",
-        description: "You can buy this gift card to send someone a gift for new baby.",
+        description: "Didn't find the amount of money you want? Please insert your own amount without limit.",
         tip: "New baby",
-        title:"Gift Card 2"
+        title:"Gift Card"
       },
       {
         image: require('../../../../assets/images/gift-card/baby/3.png'),
         value: "$150",
-        description: "You can buy this gift card to send someone a gift for new baby.",
+        description: "Didn't find the amount of money you want? Please insert your own amount without limit.",
         tip: "New baby",
-        title:"Gift Card 3"
+        title:"Gift Card"
       },
       {
         image: require('../../../../assets/images/gift-card/baby/4.png'),
         value: "$250",
-        description: "You can buy this gift card to send someone a gift for new baby.",
+        description: "Didn't find the amount of money you want? Please insert your own amount without limit.",
         tip: "New baby",
-        title:"Gift Card 4"
+        title:"Gift Card"
       },
       {
         image: require('../../../../assets/images/gift-card/baby/5.png'),
         value: "$350",
-        description: "You can buy this gift card to send someone a gift for new baby.",
+        description: "Didn't find the amount of money you want? Please insert your own amount without limit.",
         tip: "New baby",
-        title:"Gift Card 5"
+        title:"Gift Card"
       },
     ],
 }

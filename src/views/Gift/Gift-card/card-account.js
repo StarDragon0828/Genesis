@@ -65,19 +65,19 @@ export default function CardProfile(props) {
             <View className="gift-card-main" >
                 <View className="card-category" >
                     <Link to="/giftcard/birthdaycard" >
-                        <Button text="Birthday" className="birthday-btn" />
+                        <Button text="Birthday" className="birthday-btn" tooltipText="You can buy a birthday gift card." />
                     </Link>
                     <Link to="/giftcard/specialdaycard" >
-                        <Button text="Special Day" className="special-btn" />
+                        <Button text="Special Day" className="special-btn" tooltipText="You can buy a gift cards for special day." />
                     </Link>
                     <Link to="/giftcard/specialsomeone">
-                        <Button text="To Someone Special" className="someone-btn" />
+                        <Button text="To Someone Special" className="someone-btn" tooltipText="You can buy a gift card for someone special." />
                     </Link>
                     <Link to="/giftcard/wedding" >
-                        <Button text="Wedding" className="wedding-btn" />
+                        <Button text="Wedding" className="wedding-btn" tooltipText="You can buy wedding gift cards." />
                     </Link>
                     <Link to="/giftcard/newbaby" >
-                        <Button text="New baby" className="baby-btn" />
+                        <Button text="New baby" className="baby-btn" tooltipText="You can buy a new baby gift card."/>
                     </Link>
                 </View>
                 <h5 className='title' >Gift Card</h5> 

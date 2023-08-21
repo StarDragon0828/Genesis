@@ -6,7 +6,7 @@ import { faCaretRight, faChevronDown, faGift, faGifts } from "@fortawesome/free-
 import { useState } from "react";
 import myImage from '../../../assets/images/product/2.png'
 import memberImage from '../../../assets/images/home/navbar-member.png'
-import giftImage from '../../../assets/images/home/navbar-gift.png'
+import giftImage from '../../../assets/images/home/navbar-giftcard.png'
 import { Link } from "react-router-dom";
 
 

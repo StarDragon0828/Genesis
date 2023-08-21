@@ -31,13 +31,12 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            animation: scrollImages 50s linear infinite;
+            animation: scrollImages 40s linear infinite;
             animation-iteration-count: infinite;
 
             img {
                 width: 230px;
                 height: 150px;
-                max-width: 6230px;
             }
         }
 
@@ -46,7 +45,7 @@
               transform: translateX(0);
             }
             100% {
-              transform: translateX(-100%);
+              transform: translateX(-70%);
             }
         }
     }

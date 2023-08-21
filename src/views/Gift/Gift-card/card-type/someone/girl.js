@@ -56,19 +56,19 @@ export default function GirlfriendCard(props) {
                     <h5 className='title' >To Special Someone</h5> 
                     <View className="someone-category" >
                         <Link to="/giftcard/specialsomeone">
-                            <Button text="Grandchildren" className="grand-btn" />
+                            <Button text="Grandchildren" className="grand-btn" tooltipText="You can buy gift cards for your grandchildren." />
                         </Link>
                         <Link to="/giftcard/specialsomeone/mom" >
-                            <Button text="Mom" className="mom-btn" />
+                            <Button text="Mom" className="mom-btn" tooltipText="You can buy gift cards for your Mom." />
                         </Link>
                         <Link to="/giftcard/specialsomeone/dad">
-                            <Button text="Dad" className="dad-btn" />
+                            <Button text="Dad" className="dad-btn" tooltipText="You can buy gift cards for your Dad." />
                         </Link>
                         <Link to="/giftcard/specialsomeone/girlfriend" >
-                            <Button text="Girlfriend" className="girlfriend-btn" />
+                            <Button text="Girlfriend" className="girlfriend-btn" tooltipText="You can buy gift cards for your Girlfriend." />
                         </Link>
                         <Link to="/giftcard/specialsomeone/bestfriend" >
-                            <Button text="Best Friend" className="bestfriend-btn" />
+                            <Button text="Best Friend" className="bestfriend-btn" tooltipText="You can buy gift cards for your Best Friend." />
                         </Link>
                     </View>
                 </View>

@@ -57,19 +57,19 @@ export default function ManDay(props) {
                     <h5 className='title' >Special Day Gift Card</h5>
                     <View className="special-category" >
                         <Link to="/giftcard/specialdaycard">
-                            <Button text="Valentine's Day" className="valentine-btn" />
+                            <Button text="Valentine's Day" className="valentine-btn" tooltipText="You can buy a Valentine's Day gift card." />
                         </Link>
                         <Link to="/giftcard/specialdaycard/womenday" >
-                            <Button text="Women's Day" className="women-btn" />
+                            <Button text="Women's Day" className="women-btn" tooltipText="You can buy a Women's Day gift card." />
                         </Link>
                         <Link to="/giftcard/specialdaycard/manday">
-                            <Button text="Man's day" className="man-btn" />
+                            <Button text="Man's day" className="man-btn" tooltipText="You can buy a Man's Day gift card." />
                         </Link>
                         <Link to="/giftcard/specialdaycard/beautifulday" >
-                            <Button text="Beautiful Day" className="beautiful-btn" />
+                            <Button text="Beautiful Day" className="beautiful-btn" tooltipText="You can buy a Beautiful Day gift card." />
                         </Link>
                         <Link to="/giftcard/specialdaycard/christmasday" >
-                            <Button text="A gift for Christmas" className="christmas-btn" />
+                            <Button text="A gift for Christmas" className="christmas-btn" tooltipText="You can buy a Christmas Day gift card." />
                         </Link>
                     </View>
                 </View> 

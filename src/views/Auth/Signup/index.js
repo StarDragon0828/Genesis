@@ -31,6 +31,10 @@ const Signup = (props) => {
     }
     if (email.trim() === "") {
       errors.email = "Please enter your email";
+    } else if (!isValidEmailFormat(email)) {
+      errors.email = "Invalid email address";
+    } else if (getEmailType(email) !== "desiredEmailType") {
+      errors.email = "Invalid email type";
     }
     if (password.trim() === "") {
       errors.password = "Please enter a password";
@@ -71,10 +75,41 @@ const Signup = (props) => {
     }
   };
 
+  // const handleEmailChange = (event) => {
+  //   setEmail(event.target.value);
+  //   if (validationErrors.email) {
+  //     setValidationErrors({ ...validationErrors, email: "" });
+  //   }
+  // };
+
+  const isValidEmailFormat = (email) => {
+    const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,}$/;
+    return emailRegex.test(email);
+  };
+
+  const getEmailType = (email) => {
+    const domain = email.split('@')[1];
+  
+    if (domain === 'gmail.com') {
+      return 'Gmail';
+    } else if (domain === 'yahoo.com') {
+      return 'Yahoo';
+    } else if (domain === 'outlook.com' || domain === 'hotmail.com') {
+      return 'Outlook/Hotmail';
+    } else {
+      return 'Other';
+    }
+  };
+
   const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-    if (validationErrors.email) {
-      setValidationErrors({ ...validationErrors, email: "" });
+    const enteredEmail = event.target.value;
+    setEmail(enteredEmail);
+    
+    const emailType = getEmailType(enteredEmail);
+    if (emailType !== 'desiredEmailType') { // Replace 'desiredEmailType' with the email type you want to validate against
+      setValidationErrors({ ...validationErrors, email: 'Invalid email type' });
+    } else {
+      setValidationErrors({ ...validationErrors, email: '' });
     }
   };
 
