@@ -3,12 +3,14 @@ import View from '../../../components/UI/View';
 import './style.scss';
 import Button from '../../../components/UI/Button';
 import OrderModal from './modal';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import paypalImage from '../../../assets/images/chekout/paymentMethod/paypal.png';
 import walletImage from '../../../assets/images/chekout/paymentMethod/wallet.png';
 import bankImage from '../../../assets/images/chekout/paymentMethod/bank.png';
 import giftcardImage from '../../../assets/images/chekout/paymentMethod/giftcard.png'
 import {paymentOptionImage} from './data'
+import { PayPalButtons, PayPalScriptProvider } from '@paypal/react-paypal-js';
+import { CLIENT_ID } from '../../../Config/config';
 
 
 
@@ -25,6 +27,49 @@ export default function PaymentOption(props) {
 
     let content;
 
+    const [show, setShow] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [ErrorMessage, setErrorMessage] = useState("");
+    const [orderID, setOrderID] = useState(false);
+
+    // creates a paypal order
+    const createOrder = (data, actions) => {
+        return actions.order.create({
+            purchase_units: [
+                {
+                    description: "Sunflower",
+                    amount: {
+                        currency_code: "USD",
+                        value: 20,
+                    },
+                },
+            ],
+        }).then((orderID) => {
+                setOrderID(orderID);
+                return orderID;
+            });
+    };
+
+    // check Approval
+    const onApprove = (data, actions) => {
+        return actions.order.capture().then(function (details) {
+            const { payer } = details;
+            setSuccess(true);
+        });
+    };
+
+    //capture likely error
+    const onError = (data, actions) => {
+        setErrorMessage("An Error occured with your payment ");
+    };
+
+    useEffect(() => {
+        if (success) {
+            alert("Payment successful!!");
+            console.log('Order successful . Your order id is--', orderID);
+        }
+    },[success]);
+
     switch(props.currentPage){
             case 'page4':
             content = <View className="payment-option-details">
@@ -34,7 +79,7 @@ export default function PaymentOption(props) {
                         </View>
                         <View className="payment-details" >
                             <Accordion>
-                                <Accordion.Item eventKey='0' className='payment-upi'>
+                                {/* <Accordion.Item eventKey='0' className='payment-upi'>
                                     <Accordion.Header>
                                     <View className="upi" >
                                         <FormCheck type="radio" id="radio1" label="UPI" name="myRadioGroup" />
@@ -68,7 +113,7 @@ export default function PaymentOption(props) {
                                                 </View>
                                             </Form>
                                         </Accordion.Body>
-                                </Accordion.Item>
+                                </Accordion.Item> */}
                                 <Accordion.Item eventKey='2' className='payment-paypal'>
                                         <Accordion.Header>
                                             <View className="paypal" >
@@ -77,14 +122,20 @@ export default function PaymentOption(props) {
                                             <Image src={paypalImage} />
                                         </Accordion.Header>
                                         <Accordion.Body>
-                                            <Form className='d-flex align-items-center' >
-                                                <FormGroup className='paypal-id' >
-                                                    <Form.Control type="text" placeholder="PayPal Address"/>
-                                                </FormGroup>
-                                                <View>
-                                                    <Button text="Pay" tooltipText="Click this button to make payment." className="payment-btn" onClick={handleOpenModal} />
-                                                </View>
-                                            </Form>
+                                            <PayPalScriptProvider option={{"client-id":CLIENT_ID}} >
+                                                <Form  >
+                                                    <View>
+                                                        <Button text="Pay" tooltipText="Click this button to make payment." className="payment-btn"  onClick={() => setShow(true)} />
+                                                    </View>
+                                                    {show ? (
+                                                        <PayPalButtons
+                                                            style={{ layout: "vertical", marginRight: "20px" }}
+                                                            createOrder={createOrder}
+                                                            onApprove={onApprove}
+                                                        />
+                                                    ) : null}
+                                                </Form>
+                                            </PayPalScriptProvider>
                                         </Accordion.Body>
                                 </Accordion.Item>
                                 <Accordion.Item eventKey='3' className='payment-card' >
@@ -113,7 +164,7 @@ export default function PaymentOption(props) {
                                             </Form>
                                         </Accordion.Body>
                                 </Accordion.Item>
-                                <Accordion.Item eventKey='4' className='payment-banking'>
+                                {/* <Accordion.Item eventKey='4' className='payment-banking'>
                                         <Accordion.Header>
                                             <View className="net-banking" >
                                                 <FormCheck type="radio" id="radio5" label="Net Banking" name="myRadioGroup" />
@@ -130,7 +181,7 @@ export default function PaymentOption(props) {
                                                 </View>
                                             </Form>
                                         </Accordion.Body>
-                                </Accordion.Item>
+                                </Accordion.Item> */}
                                 <Accordion.Item eventKey='5' className='payment-gift'>
                                         <Accordion.Header>
                                             <View className="gift-card" >
