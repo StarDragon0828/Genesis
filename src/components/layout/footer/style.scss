@@ -27,7 +27,12 @@
         line-height: 18px;
         letter-spacing: 0em;
         text-align: left;
+        cursor: pointer;
         margin-bottom: 4px;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -57,6 +62,11 @@
         letter-spacing: 0em;
         text-align: left;
         width: 200px;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
