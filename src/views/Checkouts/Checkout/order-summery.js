@@ -88,12 +88,22 @@ export default function OrderSummery(props) {
                                         <input placeholder='Enter Email' />
                                         <h5>Phone Number</h5>
                                         <input placeholder='Enter Phone number' />
+                                        <h5>Street Address</h5>
+                                        <input type="text" id="street-address" name="street-address" required  placeholder='Enter Street Address' />
+                                        <h5>House Number</h5>
+                                        <input type="text" id="house-number" name="house-number" required placeholder='Enter House Number' />
                                     </View>
                                     <View>
-                                        <h5>Country</h5>
-                                        <input placeholder='Enter Country' />
+                                        <h5>Apartment Number</h5>
+                                        <input type="text" id="apartment-number" name="apartment-number" required placeholder='Enter Apartment Number' />
+                                        <h5>PO Box Number</h5>
+                                        <input type="text" id="po-box" name="po-box" required placeholder='Enter PO Box Number' />
+                                        <h5>ZIP Code</h5>
+                                        <input type="text" id="zip-code" name="zip-code" required placeholder='Enter ZIP Code' />
                                         <h5>City</h5>
                                         <input placeholder='Enter City' />
+                                        <h5>Country</h5>
+                                        <input placeholder='Enter Country' />
                                     </View>
                                 </View>
                             </Modal.Body>

@@ -17,12 +17,9 @@ export default function SideBar(props) {
     const [headerOpen, setHeaderOpen] = useState(false);
     const [displayHeaderContent, setDisplayHeaderContent] = useState(false);
     const [displayFooterContent, setDisplayFooterContent] = useState(false);
-    const [headerCategory1, setHeaderCategory1] = useState(false);
-    const [headerCategory2, setHeaderCategory2] = useState(false);
-    const [headerCategory3, setHeaderCategory3] = useState(false);
-    const [headerCategory4, setHeaderCategory4] = useState(false);
-    const [headerCategory5, setHeaderCategory5] = useState(false);
-    const [headerCategory6, setHeaderCategory6] = useState(false);
+    const [headerCategory, setHeaderCategory] = useState(false);
+
+    const items = ['Product Categories', 'Travel & Outdoors', 'Tickets & Reservations', 'Food & Beverage', 'Servicies', 'Technology & Innovation'];
 
     const handleUserManagementClick = () => {
         setDisplayUsers(true);
@@ -41,80 +38,16 @@ export default function SideBar(props) {
         setDisplayHeaderContent(true);
         setDisplayFooterContent(false);
         setHeaderOpen(!headerOpen);
-        setHeaderCategory1(false);
-        setHeaderCategory2(false);
-        setHeaderCategory3(false);
-        setHeaderCategory4(false);
-        setHeaderCategory5(false);
-        setHeaderCategory6(false);
     }
 
     const handleFooterContent = () => {
         setDisplayFooterContent(true);
         setDisplayHeaderContent(false);
-        setHeaderCategory1(false);
-        setHeaderCategory2(false);
-        setHeaderCategory3(false);
-        setHeaderCategory4(false);
-        setHeaderCategory5(false);
-        setHeaderCategory6(false);
     }
 
-    const handleCategory1 = () => {
-        setHeaderCategory1(true);
-        setDisplayFooterContent(false);
-        setHeaderCategory2(false);
-        setHeaderCategory3(false);
-        setHeaderCategory4(false);
-        setHeaderCategory5(false);
-        setHeaderCategory6(false);
-    }
-
-    const handleCategory2 = () => {
-        setHeaderCategory2(true);
-        setHeaderCategory1(false);
-        setHeaderCategory3(false);
-        setHeaderCategory4(false);
-        setHeaderCategory5(false);
-        setHeaderCategory6(false);
-        
-    }
-
-    const handleCategory3 = () => {
-        setHeaderCategory3(true);
-        setHeaderCategory1(false);
-        setHeaderCategory2(false);
-        setHeaderCategory4(false);
-        setHeaderCategory5(false);
-        setHeaderCategory6(false);
-    }
-
-    const handleCategory4 = () => {
-        setHeaderCategory4(true);
-        setHeaderCategory1(false);
-        setHeaderCategory2(false);
-        setHeaderCategory3(false);
-        setHeaderCategory5(false);
-        setHeaderCategory6(false);
-    }
-
-    const handleCategory5 = () => {
-        setHeaderCategory5(true);
-        setHeaderCategory1(false);
-        setHeaderCategory2(false);
-        setHeaderCategory3(false);
-        setHeaderCategory4(false);
-        setHeaderCategory6(false);
-    }
-
-    const handleCategory6 = () => {
-        setHeaderCategory6(true);
-        setHeaderCategory1(false);
-        setHeaderCategory2(false);
-        setHeaderCategory3(false);
-        setHeaderCategory4(false);
-        setHeaderCategory5(false);
-    }
+    const handleCategory = (item) => {
+        setHeaderCategory(item);
+      }
 
     return (
         <View className="admin-panel" >
@@ -139,24 +72,11 @@ export default function SideBar(props) {
                         </View>
                         <Collapse in={headerOpen}>
                             <View className="content-titles" >
-                                <View onClick={handleCategory1}>
-                                    <h5 className='header-content' >Product Categories</h5>
-                                </View>
-                                <View onClick={handleCategory2}>
-                                    <h5 className='footer-content' >Travel & Outdoors</h5>
-                                </View>
-                                <View onClick={handleCategory3}>
-                                    <h5 className='header-content' >Tickets & Reservations</h5>
-                                </View>
-                                <View onClick={handleCategory4}>
-                                    <h5 className='footer-content' >Food & Beverage</h5>
-                                </View>
-                                <View onClick={handleCategory5}>
-                                    <h5 className='header-content' >Servicies</h5>
-                                </View>
-                                <View onClick={handleCategory6}>
-                                    <h5 className='footer-content' >Technology & Innovation</h5>
-                                </View>
+                                {items.map((item, index) => (
+                                    <View  key={index} onClick={() => handleCategory(item)}>
+                                        <h5 className='header-content' >{item}</h5>
+                                    </View>
+                                ))}
                             </View>
                         </Collapse>
                         <View onClick={handleFooterContent}>
@@ -172,8 +92,7 @@ export default function SideBar(props) {
                 
                 {displayUsers && <MyUsers />}
                 {displayContents && 
-                    <AdminContent headerCategory1={headerCategory1} headerCategory2={headerCategory2} headerCategory3={headerCategory3} headerCategory4={headerCategory4} 
-                    headerCategory5={headerCategory5} headerCategory6={headerCategory6} displayHeaderContent={displayHeaderContent} displayFooterContent={displayFooterContent}/>
+                    <AdminContent headerCategory={headerCategory} displayHeaderContent={displayHeaderContent} displayFooterContent={displayFooterContent}/>
                 }
             </View>
         </View>
