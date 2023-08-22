@@ -28,7 +28,7 @@ export default function GiftCardModal(props) {
         setUploadedImage(imageUrl);
     };
 
-    const { showBuyModal,tip, showMailModal, showSendModal, selectedGiftCardImage, fileInputRef, onHide,type, onClick } = props;
+    const { showBuyModal,tip, showMailModal, showSendModal, selectedGiftCardImage, fileInputRef, onHide, onClick } = props;
 
     const hideModal = () => {
         clearImage()

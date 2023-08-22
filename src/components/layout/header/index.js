@@ -13,7 +13,6 @@ const Header = (props) => {
   const userName = localStorage.getItem("auth-name");
 
   const logOut = () => {
-    console.log("logOut");
     localStorage.setItem("auth-name",'');
     localStorage.setItem("auth-token",'');
   }

@@ -39,6 +39,8 @@ import MomCard from "../views/Gift/Gift-card/card-type/someone/mom";
 import DadCard from "../views/Gift/Gift-card/card-type/someone/dad";
 import GirlfriendCard from "../views/Gift/Gift-card/card-type/someone/girl";
 import BestfriendCard from "../views/Gift/Gift-card/card-type/someone/best";
+import AdminLayout from "../layouts/AdminLayout";
+import AdminPanel from "../admin-panel";
 
 export const routes = createBrowserRouter([
   {
@@ -188,5 +190,9 @@ export const routes = createBrowserRouter([
   {
     path: "/giftcard/newbaby",
     element: <PublicLayout view={<BabyGift/>}/>
+  },
+  {
+    path: "/adminpanel",
+    element: <AdminLayout view={<AdminPanel/>}/>
   },
 ])

@@ -124,16 +124,11 @@ export default function PaymentOption(props) {
                                         <Accordion.Body>
                                             <PayPalScriptProvider option={{"client-id":CLIENT_ID}} >
                                                 <Form  >
-                                                    <View>
-                                                        <Button text="Pay" tooltipText="Click this button to make payment." className="payment-btn"  onClick={() => setShow(true)} />
-                                                    </View>
-                                                    {show ? (
-                                                        <PayPalButtons
-                                                            style={{ layout: "vertical", marginRight: "20px" }}
-                                                            createOrder={createOrder}
-                                                            onApprove={onApprove}
-                                                        />
-                                                    ) : null}
+                                                    <PayPalButtons
+                                                        style={{ layout: "vertical", marginRight: "20px" }}
+                                                        createOrder={createOrder}
+                                                        onApprove={onApprove}
+                                                    />
                                                 </Form>
                                             </PayPalScriptProvider>
                                         </Accordion.Body>

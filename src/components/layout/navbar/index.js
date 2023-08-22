@@ -1,4 +1,4 @@
-import { Container, Dropdown, Image } from "react-bootstrap";
+import { Container, Dropdown, Image, OverlayTrigger, Tooltip } from "react-bootstrap";
 import View from "../../UI/View";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./style.scss";
@@ -20,6 +20,8 @@ const Navbar = (props) => {
   const [serviciesOpen, setServiciesOpen] = useState(false);
   const [technologyOpen, setTechnologyOpen] = useState(false);
   const [memberOpen, setMemberOpen] = useState(false);
+  const tooltip = <Tooltip className="custom-tooltip">This is the gift card page. You can buy gift cards and send them to anyone you want.</Tooltip>;
+
 
   const handleProductMenu = () => {
     setProductOpen(!productOpen);
@@ -338,9 +340,11 @@ const Navbar = (props) => {
           </Dropdown.Menu>
         </Dropdown>
         <View className="navbar-gift">
+        <OverlayTrigger placement="top" overlay={tooltip} delay={{ show: 200, hide: 300 }}>
           <Link to="/giftcard">
             <Image src={giftImage}/> 
           </Link>
+        </OverlayTrigger>
         </View>
       </View>
     </Container>

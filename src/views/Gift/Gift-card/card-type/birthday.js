@@ -36,7 +36,6 @@ export default function Birthday(props) {
     }
 
     const handleCloseSendModal = () => {
-        console.log('here')
         setShowSendModal(false);
         setSelectedGiftCardImage('');
         setUploadedImage('');
@@ -70,20 +69,19 @@ export default function Birthday(props) {
                                             <h5 className='card-value' >{item.value}</h5>
                                             <View className="input-contain">
                                                 <h5 className="card-value" >$</h5>
-                                                <input type="number" className="value-input" />
+                                                <input type="number" className="value-input" title="Didn't find the amount of money you want? Please insert your own amount without limit." />
                                             </View>
                                         </View>
                                     </View>
                                 </View>
                                 <View className="d-flex align-items-center justify-content-between" >
-                                    <h5 className='description' >{item.description}</h5>
                                     <View className="btn-group">
-                                        <Button text="Send" className="send-btn" onClick={() => {
+                                        <Button text="Send" className="send-btn" tooltipText="You can send this gift card to anyone you want." onClick={() => {
                                             setSelectedTip(item.tip);
                                             handleOpenSendModal(item.image);
                                         }} />
-                                        <Button text="Mail" className="mail-btn" onClick={handleOpenMailModal} />
-                                        <Button text="Buy" className='buy-btn' onClick={handleOpenModal}  />
+                                        <Button text="Mail" className="mail-btn" tooltipText="You can send mail to anyone you want." onClick={handleOpenMailModal} />
+                                        <Button text="Buy" className='buy-btn' tooltipText="You can purchase this gift card." onClick={handleOpenModal}  />
                                     </View>
                                 </View>
                             </View>

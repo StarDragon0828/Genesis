@@ -157,6 +157,9 @@
                     border: 1px solid rgba(0, 0, 0, .1);
                     margin-top: 20px;
                     margin-bottom: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
 
                     .image-contain {
                         position: relative;
@@ -229,6 +232,21 @@
                             -webkit-appearance: none;
                             margin: 0;
                         }
+
+                        .input-contain input[type="number"]:hover::after {
+                            content: attr(title);
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            width: 100%;
+                            padding: 5px;
+                            background-color: #f9f9f9;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            font-size: 14px;
+                            line-height: 1.4;
+                            z-index: 9999;
+                        }
                     }
 
                     .description {
@@ -248,8 +266,8 @@
 
                         .buy-btn {
                             color: black;
-                            width: 71px;
-                            height: 25px;
+                            width: 90px;
+                            height: 40px;
                             font-size: 14px;
                             font-weight: 600;
                             letter-spacing: 0em;
@@ -262,8 +280,8 @@
     
                         .send-btn {
                             color: black;
-                            width: 71px;
-                            height: 25px;
+                            width: 90px;
+                            height: 40px;
                             font-size: 14px;
                             font-weight: 600;
                             letter-spacing: 0em;
@@ -276,8 +294,8 @@
     
                         .mail-btn {
                             color: black;
-                            width: 71px;
-                            height: 25px;
+                            width: 90px;
+                            height: 40px;
                             font-size: 14px;
                             font-weight: 600;
                             letter-spacing: 0em;

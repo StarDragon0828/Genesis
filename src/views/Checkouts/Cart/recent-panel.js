@@ -23,7 +23,6 @@ export default function RecentPanel(props) {
 
 export const RecentItem = (props) => {
     const { recentItem } = props;
-    console.log(recentItem);
 
     return <View className="recent-component" >
         <Stack direction="horizontal" className="justify-content-center align-items-center">
